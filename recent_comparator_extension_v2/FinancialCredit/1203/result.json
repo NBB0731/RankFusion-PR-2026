@@ -1,0 +1,58 @@
+{
+  "status": "complete",
+  "dataset": "FinancialCredit",
+  "seed": 1203,
+  "protocol_sha256": "7658af0889a3a43687f241636ea62b6e84eac2d7fbf570ae9c6832c91fcedf13",
+  "official_source_commits": {
+    "WSAD-DT": "b59c4aa4595fd24462e9c6852c1fc792a0dc7d0d",
+    "FairComb": "1309b7780e61c96998246135348bbfdfb2939b01"
+  },
+  "metrics": {
+    "candidate_validation_AP": 0.5303588338185297,
+    "candidate_test_AP": 0.4948249976746708,
+    "FairComb_test_AP": 0.1741432271110829,
+    "WSAD_DT_validation_AP": 0.36684252611738516,
+    "WSAD_DT_test_AP": 0.36901996176707735
+  },
+  "faircomb": {
+    "selected_experts": [
+      "Extra Trees",
+      "RRFEN fuzzy-only"
+    ],
+    "selected_indices": [
+      2,
+      4
+    ],
+    "validation_top_k": 36,
+    "score_parity": 0.08271791705055431,
+    "ep_before": 0.22339906492714556,
+    "ep_after": 0.16915320513477916,
+    "correction_applied": true,
+    "fallback_fixed_topk": null,
+    "variant": "WtSR",
+    "ep_combination_rule": "max over selected expert scores",
+    "final_combination": "mean",
+    "gselect_z_norm_validation_AP": 0.16874326192771597
+  },
+  "wsad_dt": {
+    "official_defaults": {
+      "n_ensemble": 5,
+      "batch_size": 64,
+      "epochs": 100,
+      "seed": 1203,
+      "parallel": false
+    },
+    "fit_and_score_seconds": 288.25123690001783,
+    "train_rows": 3316
+  },
+  "counts": {
+    "unlabeled_reference": 3256,
+    "known_normal_support": 50,
+    "known_anomaly_support": 10,
+    "validation": 2071,
+    "test": 2072
+  },
+  "test_labels_used_in_model_or_fusion_selection": false,
+  "prediction_sha256": "b1cdcef8d05a6cebe6d0f129b1fea42e0bd3672cdc2024e3fb96dc3974751697",
+  "runner_sha256": "342f26440c4481a2dfe0d4ecfb69928e4c96d38051e3ab31d63f2aeb60c7977f"
+}

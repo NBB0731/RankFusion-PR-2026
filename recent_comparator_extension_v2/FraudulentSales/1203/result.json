@@ -1,0 +1,62 @@
+{
+  "status": "complete",
+  "dataset": "FraudulentSales",
+  "seed": 1203,
+  "protocol_sha256": "7658af0889a3a43687f241636ea62b6e84eac2d7fbf570ae9c6832c91fcedf13",
+  "official_source_commits": {
+    "WSAD-DT": "b59c4aa4595fd24462e9c6852c1fc792a0dc7d0d",
+    "FairComb": "1309b7780e61c96998246135348bbfdfb2939b01"
+  },
+  "metrics": {
+    "candidate_validation_AP": 0.5842531495555643,
+    "candidate_test_AP": 0.6010049868416241,
+    "FairComb_test_AP": 0.575140639190122,
+    "WSAD_DT_validation_AP": 0.539975156678395,
+    "WSAD_DT_test_AP": 0.5556259963916598
+  },
+  "faircomb": {
+    "selected_experts": [
+      "RRFEN-Hybrid",
+      "HistGradientBoosting",
+      "RRFEN fuzzy-only",
+      "RBF-SVM"
+    ],
+    "selected_indices": [
+      5,
+      3,
+      4,
+      0
+    ],
+    "validation_top_k": 617,
+    "score_parity": 0.0664041833208584,
+    "ep_before": 0.2555280915184812,
+    "ep_after": 0.21422529507841004,
+    "correction_applied": true,
+    "fallback_fixed_topk": null,
+    "variant": "WtSR",
+    "ep_combination_rule": "max over selected expert scores",
+    "final_combination": "mean",
+    "gselect_z_norm_validation_AP": 0.5392625051918825
+  },
+  "wsad_dt": {
+    "official_defaults": {
+      "n_ensemble": 5,
+      "batch_size": 64,
+      "epochs": 100,
+      "seed": 1203,
+      "parallel": false
+    },
+    "fit_and_score_seconds": 286.4320354000083,
+    "train_rows": 4006
+  },
+  "counts": {
+    "unlabeled_reference": 3946,
+    "known_normal_support": 50,
+    "known_anomaly_support": 10,
+    "validation": 2972,
+    "test": 2972
+  },
+  "test_labels_used_in_model_or_fusion_selection": false,
+  "prediction_sha256": "1d2257db998603e53ea94b9ca42a41b8ba617afe10c01e2a11c1284f512338d2",
+  "runner_sha256": "342f26440c4481a2dfe0d4ecfb69928e4c96d38051e3ab31d63f2aeb60c7977f"
+}

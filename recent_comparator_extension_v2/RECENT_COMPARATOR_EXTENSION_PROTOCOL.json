@@ -1,0 +1,43 @@
+{
+  "version": "1.0",
+  "status": "amended_and_frozen_before_primary_comparator_batch",
+  "purpose": "Retrospective, same-split comparison of the already frozen AP-weighted rank fusion against the official WSAD-DT implementation and an explicitly adapted FairComb procedure.",
+  "interpretation": "Replication 5 outcomes for the proposed fusion have already been examined. New comparator predictions are generated without consulting test labels, but this extension is post-hoc with respect to the primary study and must not be presented as a second prospective confirmation.",
+  "cohort": "FROZEN_GROUPCLEAN_REPLICATION5_PROTOCOL.json",
+  "datasets": [
+    "GeneAnnotationOverlap", "DeliveryService", "PatientStatusTracking", "HealthOutcome",
+    "KidneyTransplants", "SoilComposition", "CodeQualityMetrics", "ElectrocaloricAnomalies", "FinancialPortfolioAnomalies",
+    "FraudulentSales", "FootballBetting", "MobileMoneyTransactions", "RestaurantViolation", "HatPricingRatings",
+    "FinancialCredit", "LandShapeAnomaly", "GasBenchmark", "FacilityViolation", "MedicalClassificationAnomalies"
+  ],
+  "seeds": [1201, 1202, 1203, 1204, 1205],
+  "split_and_support": "Reuse exactly the group-clean Replication 5 split and support indices: 50 labeled normal calibration rows and 10 labeled anomaly support rows; validation and test rows remain unchanged.",
+  "preprocessing": "Imputation and standardization for split reconstruction follow the frozen Replication 5 runner. WSAD-DT receives an additional MinMax transform fit only on its training rows (unlabeled reference plus labeled calibration), following the official implementation's input convention; validation and test labels are never used to fit preprocessing.",
+  "candidate": "Use the already frozen six-expert validation-AP-weighted percentile-rank fusion exactly as defined in score_rankfusion_replication5_confirmatory.py (temperature 0.05; per-expert bootstrap mean AP weights). No choices are altered based on this extension.",
+  "wsad_dt": {
+    "implementation": "Official author repository snapshot; CPU implementation.",
+    "weak_labels": "All unlabeled-reference rows and the 50 known-normal calibration rows are coded 0; the same 10 labeled anomaly-support rows are coded 1.",
+    "hyperparameters": "Use the official package defaults: five ensemble members, batch size 64, original 100-epoch training, deterministic seed equal to split seed. No test-informed tuning; this is the paper-default comparator.",
+    "selection": "No hyperparameter selection. Validation AP is reported descriptively and is not used to change the fixed official configuration."
+  },
+  "faircomb": {
+    "implementation": "Python port of the official author's public R routines: Z-Norm, G-Select, Score-Parity, WtSR, and EP checks; parameters match Main.R defaults where applicable.",
+    "adaptation": "Run selection and parity checks on validation scores only. The top-k prevalence input is the number of labeled validation anomalies; identities of validation anomalies are not passed to G-Select. Test-label prevalence is never accessed. The selected members and correction decision are then applied to test scores. Test ranks use only unlabeled test score values, as in transductive score-combination methods.",
+    "parameters": "G-Select; Z-Norm; MAX-EP; score-parity threshold 0.04; WtSR alpha 0.5; author-code fallback fixed top-k values 0.05, 0.10, 0.15 if needed.",
+    "output": "Report both the G-Select/Z-Norm aggregate and the FairComb parity-gated WtSR result."
+  },
+  "primary_metric": "average precision (AP)",
+  "aggregation": "Mean AP over the five seeds within each family, followed by equal-weight macro AP over families. Family is the inferential unit.",
+  "statistics": "Family-level paired two-sided Wilcoxon signed-rank tests for the proposed fusion versus WSAD-DT and FairComb; Holm correction across these two primary comparator contrasts; family-bootstrap 95% confidence intervals for paired AP differences; Friedman omnibus across the candidate and comparator methods.",
+  "guardrails": [
+    "Do not change the frozen fusion, datasets, splits, support examples, methods, parameters, exclusions, or primary metric after reading any new comparator test result.",
+    "Report runtime failures and missing families; do not silently drop them.",
+    "Label all outcomes from this extension as retrospective/post-hoc because the Replication 5 candidate results were already examined.",
+    "Do not compare against KDAlign unless domain rules can be supplied under an equivalent protocol; it requires a distinct knowledge input not present in these data."
+  ],
+  "amendment_log": [
+    "A single code-feasibility pilot (LandParcelValidation, seed 1201) was run and its test metric was printed. That family is excluded in full from all reported comparator-extension statistics.",
+    "A source-code audit against the authors' public Main.R identified that FairComb's EP check uses the per-observation maximum over selected experts, and each fixed-top-k fallback must independently pass the score-parity threshold. The implementation was corrected before the primary 19-family batch."
+  ],
+  "excluded_pilot": {"dataset": "LandParcelValidation", "seed": 1201, "reason": "Feasibility pilot; FairComb implementation audited and corrected before the main batch. Exclude the entire dataset family from inference."}
+}

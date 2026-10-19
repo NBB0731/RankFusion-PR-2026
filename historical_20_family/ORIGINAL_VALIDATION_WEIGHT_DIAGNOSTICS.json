@@ -1,0 +1,161 @@
+{
+  "status": "validation_only_descriptive_mechanism_diagnostic",
+  "n_runs": 100,
+  "test_labels_or_test_scores_used": false,
+  "temperature": 0.05,
+  "expert_summary": {
+    "RBF-SVM": {
+      "mean_validation_AP": 0.5829190079715211,
+      "mean_weight": 0.21624102429263037,
+      "median_weight": 0.18251359623297383,
+      "weight_q10_q90": [
+        0.013688142106962092,
+        0.44937553437449707
+      ],
+      "top_weight_frequency": 38
+    },
+    "Random Forest": {
+      "mean_validation_AP": 0.6139586349455213,
+      "mean_weight": 0.2269765361292209,
+      "median_weight": 0.17279690502892217,
+      "weight_q10_q90": [
+        0.05402047683455375,
+        0.5058824089141503
+      ],
+      "top_weight_frequency": 16
+    },
+    "Extra Trees": {
+      "mean_validation_AP": 0.6241275479997871,
+      "mean_weight": 0.24394723477861674,
+      "median_weight": 0.18530082789230176,
+      "weight_q10_q90": [
+        0.1094579370334619,
+        0.4586239069015227
+      ],
+      "top_weight_frequency": 30
+    },
+    "HistGradientBoosting": {
+      "mean_validation_AP": 0.4880951007305309,
+      "mean_weight": 0.06170362749956213,
+      "median_weight": 0.02314553211847343,
+      "weight_q10_q90": [
+        0.00048244745835925284,
+        0.16666666666666666
+      ],
+      "top_weight_frequency": 1
+    },
+    "RRFEN fuzzy-only": {
+      "mean_validation_AP": 0.5149917102525778,
+      "mean_weight": 0.11635993165181818,
+      "median_weight": 0.09813699596325173,
+      "weight_q10_q90": [
+        0.00023872829590586682,
+        0.24003420526130184
+      ],
+      "top_weight_frequency": 9
+    },
+    "RRFEN-Hybrid": {
+      "mean_validation_AP": 0.579862615393899,
+      "mean_weight": 0.1347716456481517,
+      "median_weight": 0.13775001282636745,
+      "weight_q10_q90": [
+        0.013486184381396456,
+        0.22569977701635163
+      ],
+      "top_weight_frequency": 6
+    }
+  },
+  "mean_total_fuzzy_weight": 0.2511315772999699,
+  "mean_effective_experts": 4.242405621489121,
+  "top_expert_counts": {
+    "RBF-SVM": 38,
+    "Random Forest": 16,
+    "Extra Trees": 30,
+    "HistGradientBoosting": 1,
+    "RRFEN fuzzy-only": 9,
+    "RRFEN-Hybrid": 6
+  },
+  "per_family": {
+    "LandParcelValidation": {
+      "mean_fuzzy_weight": 0.1865342835782224,
+      "mean_effective_experts": 3.4942085322756236
+    },
+    "GeneAnnotationOverlap": {
+      "mean_fuzzy_weight": 0.31606167603578567,
+      "mean_effective_experts": 4.430324025749206
+    },
+    "DeliveryService": {
+      "mean_fuzzy_weight": 0.11191055022730226,
+      "mean_effective_experts": 3.872323272465651
+    },
+    "PatientStatusTracking": {
+      "mean_fuzzy_weight": 0.32799353859946845,
+      "mean_effective_experts": 3.8751164857795715
+    },
+    "HealthOutcome": {
+      "mean_fuzzy_weight": 0.26779509237599874,
+      "mean_effective_experts": 4.39440380194502
+    },
+    "KidneyTransplants": {
+      "mean_fuzzy_weight": 0.3289942316341766,
+      "mean_effective_experts": 4.869039345549906
+    },
+    "SoilComposition": {
+      "mean_fuzzy_weight": 0.3333333333333333,
+      "mean_effective_experts": 5.999999999999998
+    },
+    "CodeQualityMetrics": {
+      "mean_fuzzy_weight": 0.25099758210180306,
+      "mean_effective_experts": 5.125670035451786
+    },
+    "ElectrocaloricAnomalies": {
+      "mean_fuzzy_weight": 0.33982316515605215,
+      "mean_effective_experts": 5.966989392385258
+    },
+    "FinancialPortfolioAnomalies": {
+      "mean_fuzzy_weight": 0.35826428964265944,
+      "mean_effective_experts": 3.246373404440425
+    },
+    "FraudulentSales": {
+      "mean_fuzzy_weight": 0.0467188209961607,
+      "mean_effective_experts": 3.112410596424118
+    },
+    "FootballBetting": {
+      "mean_fuzzy_weight": 0.19543305751116163,
+      "mean_effective_experts": 3.873553973971057
+    },
+    "MobileMoneyTransactions": {
+      "mean_fuzzy_weight": 0.2934295490547133,
+      "mean_effective_experts": 5.811901516117329
+    },
+    "RestaurantViolation": {
+      "mean_fuzzy_weight": 0.15445937755962563,
+      "mean_effective_experts": 2.3477473399093753
+    },
+    "HatPricingRatings": {
+      "mean_fuzzy_weight": 0.22011432690169216,
+      "mean_effective_experts": 4.8070024878798465
+    },
+    "FinancialCredit": {
+      "mean_fuzzy_weight": 0.029186206162806577,
+      "mean_effective_experts": 2.482349650943786
+    },
+    "LandShapeAnomaly": {
+      "mean_fuzzy_weight": 0.45464912517713624,
+      "mean_effective_experts": 5.253493913239717
+    },
+    "GasBenchmark": {
+      "mean_fuzzy_weight": 0.11507499832562681,
+      "mean_effective_experts": 3.258433828645797
+    },
+    "FacilityViolation": {
+      "mean_fuzzy_weight": 0.3484275237711019,
+      "mean_effective_experts": 2.856919275854472
+    },
+    "MedicalClassificationAnomalies": {
+      "mean_fuzzy_weight": 0.3434308178545702,
+      "mean_effective_experts": 5.769851550754504
+    }
+  },
+  "interpretation_limit": "Descriptive validation-only diagnostics; do not treat as independent evidence of test performance or as a post-hoc method selection criterion."
+}

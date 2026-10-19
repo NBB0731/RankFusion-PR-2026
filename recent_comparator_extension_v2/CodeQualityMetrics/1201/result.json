@@ -1,0 +1,61 @@
+{
+  "status": "complete",
+  "dataset": "CodeQualityMetrics",
+  "seed": 1201,
+  "protocol_sha256": "7658af0889a3a43687f241636ea62b6e84eac2d7fbf570ae9c6832c91fcedf13",
+  "official_source_commits": {
+    "WSAD-DT": "b59c4aa4595fd24462e9c6852c1fc792a0dc7d0d",
+    "FairComb": "1309b7780e61c96998246135348bbfdfb2939b01"
+  },
+  "metrics": {
+    "candidate_validation_AP": 0.578876209800735,
+    "candidate_test_AP": 0.5145209095450497,
+    "FairComb_test_AP": 0.49812212728374794,
+    "WSAD_DT_validation_AP": 0.48139830644617265,
+    "WSAD_DT_test_AP": 0.3736607266559461
+  },
+  "faircomb": {
+    "selected_experts": [
+      "RRFEN-Hybrid",
+      "HistGradientBoosting",
+      "RRFEN fuzzy-only",
+      "Random Forest"
+    ],
+    "selected_indices": [
+      5,
+      3,
+      4,
+      1
+    ],
+    "validation_top_k": 111,
+    "score_parity": 0.06697528901330474,
+    "ep_before": 0.169879214247458,
+    "ep_after": 0.15640226097128485,
+    "correction_applied": true,
+    "fallback_fixed_topk": null,
+    "variant": "WtSR",
+    "ep_combination_rule": "max over selected expert scores",
+    "final_combination": "mean",
+    "gselect_z_norm_validation_AP": 0.5705775086662495
+  },
+  "wsad_dt": {
+    "official_defaults": {
+      "n_ensemble": 5,
+      "batch_size": 64,
+      "epochs": 100,
+      "seed": 1201
+    },
+    "fit_and_score_seconds": 58.57891750000999,
+    "train_rows": 689
+  },
+  "counts": {
+    "unlabeled_reference": 629,
+    "known_normal_support": 50,
+    "known_anomaly_support": 10,
+    "validation": 499,
+    "test": 500
+  },
+  "test_labels_used_in_model_or_fusion_selection": false,
+  "prediction_sha256": "b64f01558df759456f70a93081e547e1efc29d8d73e21747485da95e4e3189c9",
+  "runner_sha256": "9925c5e25ed334f35172a8caa52f53afd1a8a9c430ff7c203f75f8035d8e139c"
+}

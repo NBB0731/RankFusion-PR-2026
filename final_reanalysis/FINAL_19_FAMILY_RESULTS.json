@@ -1,0 +1,794 @@
+{
+  "status": "final_manuscript_retrospective_19_family_reanalysis",
+  "source_protocol_status": "frozen_replication5_confirmatory_test_scored_after_outputs_frozen",
+  "original_frozen_families": 20,
+  "retained_in_final_inference": 19,
+  "excluded_pilot": {
+    "dataset": "LandParcelValidation",
+    "seed": 1201,
+    "reason": "Feasibility pilot; FairComb implementation audited and corrected before the main batch. Exclude the entire dataset family from inference."
+  },
+  "seeds_per_family": 5,
+  "inferential_unit": "dataset family after averaging five seeds",
+  "primary_metric": "average precision (AP)",
+  "families": [
+    "GeneAnnotationOverlap",
+    "DeliveryService",
+    "PatientStatusTracking",
+    "HealthOutcome",
+    "KidneyTransplants",
+    "SoilComposition",
+    "CodeQualityMetrics",
+    "ElectrocaloricAnomalies",
+    "FinancialPortfolioAnomalies",
+    "FraudulentSales",
+    "FootballBetting",
+    "MobileMoneyTransactions",
+    "RestaurantViolation",
+    "HatPricingRatings",
+    "FinancialCredit",
+    "LandShapeAnomaly",
+    "GasBenchmark",
+    "FacilityViolation",
+    "MedicalClassificationAnomalies"
+  ],
+  "method_metrics": {
+    "rank_uniform_6": {
+      "macro_AP": 0.6011759682631432,
+      "between_family_SD": 0.3108964838185454,
+      "family_bootstrap_95CI": [
+        0.46508121749645914,
+        0.734850461954761
+      ],
+      "per_family_AP": {
+        "GeneAnnotationOverlap": 0.35056751853164414,
+        "DeliveryService": 0.6166633378159713,
+        "PatientStatusTracking": 0.17275961401432316,
+        "HealthOutcome": 0.7418716564206432,
+        "KidneyTransplants": 0.856574687559146,
+        "SoilComposition": 1.0,
+        "CodeQualityMetrics": 0.5069361553434026,
+        "ElectrocaloricAnomalies": 1.0,
+        "FinancialPortfolioAnomalies": 0.12266830910738033,
+        "FraudulentSales": 0.6040441105637294,
+        "FootballBetting": 0.7989064415195545,
+        "MobileMoneyTransactions": 0.033822504099397334,
+        "RestaurantViolation": 0.7464252963283246,
+        "HatPricingRatings": 0.998200380774309,
+        "FinancialCredit": 0.3819239257471477,
+        "LandShapeAnomaly": 0.42953070484362954,
+        "GasBenchmark": 0.7201061450720508,
+        "FacilityViolation": 0.3457251075291909,
+        "MedicalClassificationAnomalies": 0.9956175017298774
+      }
+    },
+    "rank_meanAP_6": {
+      "macro_AP": 0.6342814787456754,
+      "between_family_SD": 0.3099243615442027,
+      "family_bootstrap_95CI": [
+        0.4968959473250625,
+        0.7660513796064798
+      ],
+      "per_family_AP": {
+        "GeneAnnotationOverlap": 0.36067806557204846,
+        "DeliveryService": 0.6366605972779952,
+        "PatientStatusTracking": 0.15617312432258176,
+        "HealthOutcome": 0.767531497963476,
+        "KidneyTransplants": 0.8625960793347989,
+        "SoilComposition": 1.0,
+        "CodeQualityMetrics": 0.5169697265708698,
+        "ElectrocaloricAnomalies": 1.0,
+        "FinancialPortfolioAnomalies": 0.1671754947611126,
+        "FraudulentSales": 0.6319248402234845,
+        "FootballBetting": 0.8086148920826733,
+        "MobileMoneyTransactions": 0.0359545435499762,
+        "RestaurantViolation": 0.9494100355764384,
+        "HatPricingRatings": 0.9992276795582204,
+        "FinancialCredit": 0.540101822220467,
+        "LandShapeAnomaly": 0.4344472194013644,
+        "GasBenchmark": 0.7560865981259031,
+        "FacilityViolation": 0.43196842103795774,
+        "MedicalClassificationAnomalies": 0.9958274585884659
+      }
+    },
+    "rank_bootstrap_6": {
+      "macro_AP": 0.6329645614856618,
+      "between_family_SD": 0.3122143991797164,
+      "family_bootstrap_95CI": [
+        0.4946691542852999,
+        0.7656906892067846
+      ],
+      "per_family_AP": {
+        "GeneAnnotationOverlap": 0.3594258899895907,
+        "DeliveryService": 0.6371931968686486,
+        "PatientStatusTracking": 0.15606099316179,
+        "HealthOutcome": 0.7685771068842691,
+        "KidneyTransplants": 0.8626289493581224,
+        "SoilComposition": 1.0,
+        "CodeQualityMetrics": 0.5158252208695282,
+        "ElectrocaloricAnomalies": 1.0,
+        "FinancialPortfolioAnomalies": 0.14484941928352116,
+        "FraudulentSales": 0.6318423338581824,
+        "FootballBetting": 0.8087272978186382,
+        "MobileMoneyTransactions": 0.033711800089434814,
+        "RestaurantViolation": 0.9499906018746529,
+        "HatPricingRatings": 0.9993099569343025,
+        "FinancialCredit": 0.5368637992912504,
+        "LandShapeAnomaly": 0.4344181635591286,
+        "GasBenchmark": 0.7566056406213733,
+        "FacilityViolation": 0.43442180233792654,
+        "MedicalClassificationAnomalies": 0.9958744954272147
+      }
+    },
+    "rank_meanAP_4_no_fuzzy": {
+      "macro_AP": 0.6250779614860945,
+      "between_family_SD": 0.31916524523120976,
+      "family_bootstrap_95CI": [
+        0.48396881459986374,
+        0.7608447395831014
+      ],
+      "per_family_AP": {
+        "GeneAnnotationOverlap": 0.3573690233057888,
+        "DeliveryService": 0.6335085260066972,
+        "PatientStatusTracking": 0.1407346217021663,
+        "HealthOutcome": 0.7647677569714972,
+        "KidneyTransplants": 0.8549347411962651,
+        "SoilComposition": 1.0,
+        "CodeQualityMetrics": 0.5063545997106228,
+        "ElectrocaloricAnomalies": 1.0,
+        "FinancialPortfolioAnomalies": 0.10394581817872066,
+        "FraudulentSales": 0.6312269336826635,
+        "FootballBetting": 0.8057197968737846,
+        "MobileMoneyTransactions": 0.03994002393037547,
+        "RestaurantViolation": 0.951670132241689,
+        "HatPricingRatings": 0.9987214520518318,
+        "FinancialCredit": 0.5357671262509255,
+        "LandShapeAnomaly": 0.4234914795982804,
+        "GasBenchmark": 0.7567781381871665,
+        "FacilityViolation": 0.37476132675965956,
+        "MedicalClassificationAnomalies": 0.9967897715876607
+      }
+    },
+    "zscore_uniform_6": {
+      "macro_AP": 0.6193925007195845,
+      "between_family_SD": 0.30934947977783417,
+      "family_bootstrap_95CI": [
+        0.4827166120959531,
+        0.7515934491435607
+      ],
+      "per_family_AP": {
+        "GeneAnnotationOverlap": 0.3554248137554614,
+        "DeliveryService": 0.6193705409043664,
+        "PatientStatusTracking": 0.15463599242047618,
+        "HealthOutcome": 0.7571012749476262,
+        "KidneyTransplants": 0.8554114219389923,
+        "SoilComposition": 1.0,
+        "CodeQualityMetrics": 0.5123825967072616,
+        "ElectrocaloricAnomalies": 1.0,
+        "FinancialPortfolioAnomalies": 0.14931058588551088,
+        "FraudulentSales": 0.5959843357152217,
+        "FootballBetting": 0.7956084819778089,
+        "MobileMoneyTransactions": 0.03269673569634476,
+        "RestaurantViolation": 0.8700616196394936,
+        "HatPricingRatings": 0.9988917178247017,
+        "FinancialCredit": 0.5152343641898396,
+        "LandShapeAnomaly": 0.4338671359600596,
+        "GasBenchmark": 0.7412381913731733,
+        "FacilityViolation": 0.384741897200292,
+        "MedicalClassificationAnomalies": 0.9964958075354738
+      }
+    },
+    "zscore_meanAP_6": {
+      "macro_AP": 0.6356089736782651,
+      "between_family_SD": 0.3091451463626021,
+      "family_bootstrap_95CI": [
+        0.49861232537538236,
+        0.7668601641673027
+      ],
+      "per_family_AP": {
+        "GeneAnnotationOverlap": 0.35842278730782406,
+        "DeliveryService": 0.6298705597146135,
+        "PatientStatusTracking": 0.1660695792636268,
+        "HealthOutcome": 0.7737522120016008,
+        "KidneyTransplants": 0.857418325625962,
+        "SoilComposition": 1.0,
+        "CodeQualityMetrics": 0.5198172639621713,
+        "ElectrocaloricAnomalies": 1.0,
+        "FinancialPortfolioAnomalies": 0.1730236761195467,
+        "FraudulentSales": 0.6210801039847008,
+        "FootballBetting": 0.8066243176484079,
+        "MobileMoneyTransactions": 0.032799339791728235,
+        "RestaurantViolation": 0.9494826684193475,
+        "HatPricingRatings": 0.9995537187545865,
+        "FinancialCredit": 0.5411663711485201,
+        "LandShapeAnomaly": 0.4376954765152698,
+        "GasBenchmark": 0.7766596233873468,
+        "FacilityViolation": 0.4365663598065065,
+        "MedicalClassificationAnomalies": 0.9965681164352775
+      }
+    },
+    "zscore_bootstrap_6": {
+      "macro_AP": 0.6335372462708571,
+      "between_family_SD": 0.31242541019143605,
+      "family_bootstrap_95CI": [
+        0.4951062040376972,
+        0.7661962383224896
+      ],
+      "per_family_AP": {
+        "GeneAnnotationOverlap": 0.3605637998359215,
+        "DeliveryService": 0.6296695361646603,
+        "PatientStatusTracking": 0.1380806910731644,
+        "HealthOutcome": 0.7746702483173885,
+        "KidneyTransplants": 0.8571177441087137,
+        "SoilComposition": 1.0,
+        "CodeQualityMetrics": 0.5200444418452337,
+        "ElectrocaloricAnomalies": 1.0,
+        "FinancialPortfolioAnomalies": 0.1604345034159981,
+        "FraudulentSales": 0.6208728220861164,
+        "FootballBetting": 0.8070439813862731,
+        "MobileMoneyTransactions": 0.03410019794540563,
+        "RestaurantViolation": 0.9497459918531241,
+        "HatPricingRatings": 0.999591023600021,
+        "FinancialCredit": 0.5338349455950089,
+        "LandShapeAnomaly": 0.4372732517382392,
+        "GasBenchmark": 0.7771491137177309,
+        "FacilityViolation": 0.4404197527830272,
+        "MedicalClassificationAnomalies": 0.9965956336802592
+      }
+    },
+    "rank_bootstrap_4_no_fuzzy": {
+      "macro_AP": 0.6249780935767235,
+      "between_family_SD": 0.3187329193303823,
+      "family_bootstrap_95CI": [
+        0.4842383955249248,
+        0.7603436504993014
+      ],
+      "per_family_AP": {
+        "GeneAnnotationOverlap": 0.3581613710156607,
+        "DeliveryService": 0.6331417468676375,
+        "PatientStatusTracking": 0.1624034349708266,
+        "HealthOutcome": 0.767322430276008,
+        "KidneyTransplants": 0.853696046252194,
+        "SoilComposition": 1.0,
+        "CodeQualityMetrics": 0.5051302311139636,
+        "ElectrocaloricAnomalies": 1.0,
+        "FinancialPortfolioAnomalies": 0.09494277468870838,
+        "FraudulentSales": 0.631171257333307,
+        "FootballBetting": 0.8059755935106866,
+        "MobileMoneyTransactions": 0.04290897429895772,
+        "RestaurantViolation": 0.9522568829777827,
+        "HatPricingRatings": 0.9988907269908566,
+        "FinancialCredit": 0.5320123342517252,
+        "LandShapeAnomaly": 0.4216390997523004,
+        "GasBenchmark": 0.7575217173355429,
+        "FacilityViolation": 0.36059598864988873,
+        "MedicalClassificationAnomalies": 0.9968131676717003
+      }
+    },
+    "Extra Trees": {
+      "macro_AP": 0.6064807765616682,
+      "between_family_SD": 0.31677118150797484,
+      "family_bootstrap_95CI": [
+        0.4669724969011661,
+        0.7415366763958383
+      ],
+      "per_family_AP": {
+        "GeneAnnotationOverlap": 0.32065222300008467,
+        "DeliveryService": 0.623641855538569,
+        "PatientStatusTracking": 0.13033223290796442,
+        "HealthOutcome": 0.7350177642007746,
+        "KidneyTransplants": 0.8310379943956328,
+        "SoilComposition": 1.0,
+        "CodeQualityMetrics": 0.4947208626674283,
+        "ElectrocaloricAnomalies": 1.0,
+        "FinancialPortfolioAnomalies": 0.10136558923526917,
+        "FraudulentSales": 0.5693612782100578,
+        "FootballBetting": 0.7742831321285456,
+        "MobileMoneyTransactions": 0.03321079185127156,
+        "RestaurantViolation": 0.8795475224577581,
+        "HatPricingRatings": 0.9995748090458909,
+        "FinancialCredit": 0.5173701852707897,
+        "LandShapeAnomaly": 0.3884467862496941,
+        "GasBenchmark": 0.7276828449168737,
+        "FacilityViolation": 0.3994116213589433,
+        "MedicalClassificationAnomalies": 0.9974772612361471
+      }
+    },
+    "PReNet": {
+      "macro_AP": 0.5121386112212098,
+      "between_family_SD": 0.34403928534640993,
+      "family_bootstrap_95CI": [
+        0.36458924752502775,
+        0.6629262128151363
+      ],
+      "per_family_AP": {
+        "GeneAnnotationOverlap": 0.2978398827722321,
+        "DeliveryService": 0.5818087196911318,
+        "PatientStatusTracking": 0.10572391953927332,
+        "HealthOutcome": 0.6627813927809675,
+        "KidneyTransplants": 0.7479782808278999,
+        "SoilComposition": 1.0,
+        "CodeQualityMetrics": 0.34142024703266716,
+        "ElectrocaloricAnomalies": 1.0,
+        "FinancialPortfolioAnomalies": 0.08550049887819433,
+        "FraudulentSales": 0.5489693170956228,
+        "FootballBetting": 0.7480479864235763,
+        "MobileMoneyTransactions": 0.015511211645301892,
+        "RestaurantViolation": 0.1635971182376561,
+        "HatPricingRatings": 0.9984228851397153,
+        "FinancialCredit": 0.3132480847088114,
+        "LandShapeAnomaly": 0.26674361909469246,
+        "GasBenchmark": 0.7058663929217486,
+        "FacilityViolation": 0.1596864527251176,
+        "MedicalClassificationAnomalies": 0.9874876036883806
+      }
+    },
+    "DevNet": {
+      "macro_AP": 0.5145351734017007,
+      "between_family_SD": 0.34548815181983683,
+      "family_bootstrap_95CI": [
+        0.3647833885504431,
+        0.6656772416467046
+      ],
+      "per_family_AP": {
+        "GeneAnnotationOverlap": 0.21785804042641108,
+        "DeliveryService": 0.4640012553287501,
+        "PatientStatusTracking": 0.11844199456095542,
+        "HealthOutcome": 0.7822927023431858,
+        "KidneyTransplants": 0.8166048218716913,
+        "SoilComposition": 1.0,
+        "CodeQualityMetrics": 0.4602423864876227,
+        "ElectrocaloricAnomalies": 1.0,
+        "FinancialPortfolioAnomalies": 0.0726270969942314,
+        "FraudulentSales": 0.5219386401233642,
+        "FootballBetting": 0.7330166157689979,
+        "MobileMoneyTransactions": 0.016274417608214395,
+        "RestaurantViolation": 0.1032650967710865,
+        "HatPricingRatings": 0.9058859066925686,
+        "FinancialCredit": 0.4123730717563424,
+        "LandShapeAnomaly": 0.35401284658334387,
+        "GasBenchmark": 0.6911868398641896,
+        "FacilityViolation": 0.11729718401469758,
+        "MedicalClassificationAnomalies": 0.9888493774366598
+      }
+    },
+    "six_expert_validation_selector": {
+      "macro_AP": 0.6210580440750311,
+      "between_family_SD": 0.3219055929823649,
+      "family_bootstrap_95CI": [
+        0.47851632382000236,
+        0.7578172611749627
+      ],
+      "per_family_AP": {
+        "GeneAnnotationOverlap": 0.33621166302363426,
+        "DeliveryService": 0.6289505980278383,
+        "PatientStatusTracking": 0.0931453909230149,
+        "HealthOutcome": 0.7739070452035037,
+        "KidneyTransplants": 0.8438532425269762,
+        "SoilComposition": 1.0,
+        "CodeQualityMetrics": 0.5102534933582205,
+        "ElectrocaloricAnomalies": 1.0,
+        "FinancialPortfolioAnomalies": 0.1400650630328221,
+        "FraudulentSales": 0.6157204813647343,
+        "FootballBetting": 0.8028465787714889,
+        "MobileMoneyTransactions": 0.02304799737442383,
+        "RestaurantViolation": 0.9509107822649673,
+        "HatPricingRatings": 0.9997305251916784,
+        "FinancialCredit": 0.5048915430335194,
+        "LandShapeAnomaly": 0.42168220877215257,
+        "GasBenchmark": 0.7520367305165159,
+        "FacilityViolation": 0.4053722328039532,
+        "MedicalClassificationAnomalies": 0.9974772612361471
+      }
+    },
+    "expanded_8_expert_validation_selector": {
+      "macro_AP": 0.6211099123802265,
+      "between_family_SD": 0.3225203848323133,
+      "family_bootstrap_95CI": [
+        0.4782419668684167,
+        0.7582303524878078
+      ],
+      "per_family_AP": {
+        "GeneAnnotationOverlap": 0.33621166302363426,
+        "DeliveryService": 0.6272349365031183,
+        "PatientStatusTracking": 0.0931453909230149,
+        "HealthOutcome": 0.7899969935689984,
+        "KidneyTransplants": 0.8438532425269762,
+        "SoilComposition": 1.0,
+        "CodeQualityMetrics": 0.5028866388389547,
+        "ElectrocaloricAnomalies": 1.0,
+        "FinancialPortfolioAnomalies": 0.1400650630328221,
+        "FraudulentSales": 0.6098609818631445,
+        "FootballBetting": 0.8028465787714889,
+        "MobileMoneyTransactions": 0.02288556235321667,
+        "RestaurantViolation": 0.9509107822649673,
+        "HatPricingRatings": 0.9997305251916784,
+        "FinancialCredit": 0.5048915430335194,
+        "LandShapeAnomaly": 0.42168220877215257,
+        "GasBenchmark": 0.7520367305165159,
+        "FacilityViolation": 0.4053722328039532,
+        "MedicalClassificationAnomalies": 0.9974772612361471
+      }
+    }
+  },
+  "six_prespecified_primary_contrasts": [
+    {
+      "comparator": "Extra Trees",
+      "mean_delta_AP": 0.027800702184007303,
+      "median_delta_AP": 0.028403753209029325,
+      "paired_family_bootstrap_95CI": [
+        0.01815808693961232,
+        0.037769451791203904
+      ],
+      "wins_ties_losses": [
+        15,
+        2,
+        2
+      ],
+      "wilcoxon_p_raw": 0.0005026300645801942,
+      "wilcoxon_p_holm_6": 0.0030157803874811652
+    },
+    {
+      "comparator": "six_expert_validation_selector",
+      "mean_delta_AP": 0.013223434670644364,
+      "median_delta_AP": 0.007709999250156918,
+      "paired_family_bootstrap_95CI": [
+        0.006530866668370415,
+        0.021064682078396922
+      ],
+      "wins_ties_losses": [
+        13,
+        2,
+        4
+      ],
+      "wilcoxon_p_raw": 0.0022633358728580753,
+      "wilcoxon_p_holm_6": 0.009053343491432301
+    },
+    {
+      "comparator": "expanded_8_expert_validation_selector",
+      "mean_delta_AP": 0.013171566365448993,
+      "median_delta_AP": 0.012765010629211815,
+      "paired_family_bootstrap_95CI": [
+        0.0054797342317837675,
+        0.021566873770370167
+      ],
+      "wins_ties_losses": [
+        13,
+        2,
+        4
+      ],
+      "wilcoxon_p_raw": 0.005618046056498881,
+      "wilcoxon_p_holm_6": 0.016854138169496644
+    },
+    {
+      "comparator": "rank_bootstrap_6",
+      "mean_delta_AP": 0.0013169172600136423,
+      "median_delta_AP": 0.0,
+      "paired_family_bootstrap_95CI": [
+        -0.000250264431718621,
+        0.003913538974879613
+      ],
+      "wins_ties_losses": [
+        8,
+        2,
+        9
+      ],
+      "wilcoxon_p_raw": 0.7225627705707576,
+      "wilcoxon_p_holm_6": 0.7225627705707576
+    },
+    {
+      "comparator": "rank_uniform_6",
+      "mean_delta_AP": 0.0331055104825322,
+      "median_delta_AP": 0.010033571227467175,
+      "paired_family_bootstrap_95CI": [
+        0.011167278556770771,
+        0.0605627089769525
+      ],
+      "wins_ties_losses": [
+        16,
+        2,
+        1
+      ],
+      "wilcoxon_p_raw": 0.0013967480890075116,
+      "wilcoxon_p_holm_6": 0.006983740445037558
+    },
+    {
+      "comparator": "rank_meanAP_4_no_fuzzy",
+      "mean_delta_AP": 0.00920351725958098,
+      "median_delta_AP": 0.002895095208888754,
+      "paired_family_bootstrap_95CI": [
+        0.00225149047515999,
+        0.018396576753723023
+      ],
+      "wins_ties_losses": [
+        13,
+        2,
+        4
+      ],
+      "wilcoxon_p_raw": 0.00860742903798411,
+      "wilcoxon_p_holm_6": 0.01721485807596822
+    }
+  ],
+  "recent_comparator_extension": {
+    "status": "complete_posthoc_matched_comparator_extension",
+    "protocol_sha256": "7658af0889a3a43687f241636ea62b6e84eac2d7fbf570ae9c6832c91fcedf13",
+    "n_families": 19,
+    "seeds_per_family": 5,
+    "family_inference_unit": true,
+    "excluded_pilot": {
+      "dataset": "LandParcelValidation",
+      "seed": 1201,
+      "reason": "Feasibility pilot; FairComb implementation audited and corrected before the main batch. Exclude the entire dataset family from inference."
+    },
+    "methods": {
+      "candidate_test_AP": {
+        "macro_AP": 0.6342814787456754,
+        "family_sd": 0.3099243615442027,
+        "family_bootstrap_95CI": [
+          0.4968959473250625,
+          0.7660513796064798
+        ],
+        "per_family_AP": [
+          0.36067806557204846,
+          0.6366605972779952,
+          0.15617312432258176,
+          0.767531497963476,
+          0.8625960793347989,
+          1.0,
+          0.5169697265708698,
+          1.0,
+          0.1671754947611126,
+          0.6319248402234845,
+          0.8086148920826733,
+          0.0359545435499762,
+          0.9494100355764384,
+          0.9992276795582204,
+          0.540101822220467,
+          0.4344472194013644,
+          0.7560865981259031,
+          0.43196842103795774,
+          0.9958274585884659
+        ]
+      },
+      "FairComb_test_AP": {
+        "macro_AP": 0.5786510430346371,
+        "family_sd": 0.31404084147558964,
+        "family_bootstrap_95CI": [
+          0.44175023598955343,
+          0.714029696623405
+        ],
+        "per_family_AP": [
+          0.3300654740226281,
+          0.6003159241103353,
+          0.1484221386200404,
+          0.7291376723603502,
+          0.8420697477411008,
+          1.0,
+          0.4925926613482563,
+          1.0,
+          0.11565447719280146,
+          0.6028044327604375,
+          0.7859183612493854,
+          0.03234577136274126,
+          0.6962594192557727,
+          0.9902632756233587,
+          0.2931403215268929,
+          0.42172013595356833,
+          0.692491682446487,
+          0.28457841755014635,
+          0.9365899045338019
+        ]
+      },
+      "WSAD_DT_test_AP": {
+        "macro_AP": 0.5550488288471582,
+        "family_sd": 0.32714718803269477,
+        "family_bootstrap_95CI": [
+          0.41275109464071447,
+          0.6969375064386143
+        ],
+        "per_family_AP": [
+          0.3186259878577131,
+          0.6186723971322099,
+          0.15972129381014838,
+          0.6949285644936948,
+          0.8292776840722123,
+          1.0,
+          0.4327484593885359,
+          1.0,
+          0.11381396330317442,
+          0.5470471884588127,
+          0.7903577356795548,
+          0.02148459719159872,
+          0.34748234078823326,
+          1.0,
+          0.442623150420709,
+          0.3725172694210152,
+          0.7153903987583021,
+          0.148416395307956,
+          0.9928203220121337
+        ]
+      }
+    },
+    "family_level_contrasts": [
+      {
+        "comparison": "AP-weighted rank fusion vs FairComb_test_AP",
+        "mean_delta_AP": 0.05563043571103837,
+        "median_delta_AP": 0.029120407463047004,
+        "paired_family_bootstrap_95CI": [
+          0.026208943324107514,
+          0.09174942626888709
+        ],
+        "wins_ties_losses": [
+          17,
+          2,
+          0
+        ],
+        "wilcoxon_p_raw": 0.0002930525201924893,
+        "wilcoxon_p_holm_2": 0.0005861050403849786
+      },
+      {
+        "comparison": "AP-weighted rank fusion vs WSAD_DT_test_AP",
+        "mean_delta_AP": 0.07923264989851733,
+        "median_delta_AP": 0.04069619936760094,
+        "paired_family_bootstrap_95CI": [
+          0.02980092528702091,
+          0.15049823591708558
+        ],
+        "wins_ties_losses": [
+          15,
+          2,
+          2
+        ],
+        "wilcoxon_p_raw": 0.0005991194011680517,
+        "wilcoxon_p_holm_2": 0.0005991194011680517
+      }
+    ],
+    "friedman": {
+      "chi2": 19.882352941176464,
+      "p": 4.815062350473826e-05
+    },
+    "WSAD_DT_runtime_seconds": {
+      "median_family_mean": 130.0818555799953,
+      "mean_family_mean": 268.89730035368393,
+      "family_values": [
+        100.15092165999813,
+        46.25120043999632,
+        114.00032093999907,
+        69.41940353999962,
+        40.415189060010015,
+        113.93270788000082,
+        55.709760019998065,
+        31.597620820003794,
+        343.56223501999045,
+        305.38286851999,
+        180.5637881200004,
+        434.9066691599961,
+        351.78671097999904,
+        104.63498676000745,
+        257.4358904000022,
+        130.0818555799953,
+        143.0318822000001,
+        1365.756851900008,
+        920.4278437200003
+      ]
+    },
+    "per_family": {
+      "GeneAnnotationOverlap": {
+        "candidate_test_AP": 0.36067806557204846,
+        "FairComb_test_AP": 0.3300654740226281,
+        "WSAD_DT_test_AP": 0.3186259878577131,
+        "WSAD_DT_seconds_mean": 100.15092165999813
+      },
+      "DeliveryService": {
+        "candidate_test_AP": 0.6366605972779952,
+        "FairComb_test_AP": 0.6003159241103353,
+        "WSAD_DT_test_AP": 0.6186723971322099,
+        "WSAD_DT_seconds_mean": 46.25120043999632
+      },
+      "PatientStatusTracking": {
+        "candidate_test_AP": 0.15617312432258176,
+        "FairComb_test_AP": 0.1484221386200404,
+        "WSAD_DT_test_AP": 0.15972129381014838,
+        "WSAD_DT_seconds_mean": 114.00032093999907
+      },
+      "HealthOutcome": {
+        "candidate_test_AP": 0.767531497963476,
+        "FairComb_test_AP": 0.7291376723603502,
+        "WSAD_DT_test_AP": 0.6949285644936948,
+        "WSAD_DT_seconds_mean": 69.41940353999962
+      },
+      "KidneyTransplants": {
+        "candidate_test_AP": 0.8625960793347989,
+        "FairComb_test_AP": 0.8420697477411008,
+        "WSAD_DT_test_AP": 0.8292776840722123,
+        "WSAD_DT_seconds_mean": 40.415189060010015
+      },
+      "SoilComposition": {
+        "candidate_test_AP": 1.0,
+        "FairComb_test_AP": 1.0,
+        "WSAD_DT_test_AP": 1.0,
+        "WSAD_DT_seconds_mean": 113.93270788000082
+      },
+      "CodeQualityMetrics": {
+        "candidate_test_AP": 0.5169697265708698,
+        "FairComb_test_AP": 0.4925926613482563,
+        "WSAD_DT_test_AP": 0.4327484593885359,
+        "WSAD_DT_seconds_mean": 55.709760019998065
+      },
+      "ElectrocaloricAnomalies": {
+        "candidate_test_AP": 1.0,
+        "FairComb_test_AP": 1.0,
+        "WSAD_DT_test_AP": 1.0,
+        "WSAD_DT_seconds_mean": 31.597620820003794
+      },
+      "FinancialPortfolioAnomalies": {
+        "candidate_test_AP": 0.1671754947611126,
+        "FairComb_test_AP": 0.11565447719280146,
+        "WSAD_DT_test_AP": 0.11381396330317442,
+        "WSAD_DT_seconds_mean": 343.56223501999045
+      },
+      "FraudulentSales": {
+        "candidate_test_AP": 0.6319248402234845,
+        "FairComb_test_AP": 0.6028044327604375,
+        "WSAD_DT_test_AP": 0.5470471884588127,
+        "WSAD_DT_seconds_mean": 305.38286851999
+      },
+      "FootballBetting": {
+        "candidate_test_AP": 0.8086148920826733,
+        "FairComb_test_AP": 0.7859183612493854,
+        "WSAD_DT_test_AP": 0.7903577356795548,
+        "WSAD_DT_seconds_mean": 180.5637881200004
+      },
+      "MobileMoneyTransactions": {
+        "candidate_test_AP": 0.0359545435499762,
+        "FairComb_test_AP": 0.03234577136274126,
+        "WSAD_DT_test_AP": 0.02148459719159872,
+        "WSAD_DT_seconds_mean": 434.9066691599961
+      },
+      "RestaurantViolation": {
+        "candidate_test_AP": 0.9494100355764384,
+        "FairComb_test_AP": 0.6962594192557727,
+        "WSAD_DT_test_AP": 0.34748234078823326,
+        "WSAD_DT_seconds_mean": 351.78671097999904
+      },
+      "HatPricingRatings": {
+        "candidate_test_AP": 0.9992276795582204,
+        "FairComb_test_AP": 0.9902632756233587,
+        "WSAD_DT_test_AP": 1.0,
+        "WSAD_DT_seconds_mean": 104.63498676000745
+      },
+      "FinancialCredit": {
+        "candidate_test_AP": 0.540101822220467,
+        "FairComb_test_AP": 0.2931403215268929,
+        "WSAD_DT_test_AP": 0.442623150420709,
+        "WSAD_DT_seconds_mean": 257.4358904000022
+      },
+      "LandShapeAnomaly": {
+        "candidate_test_AP": 0.4344472194013644,
+        "FairComb_test_AP": 0.42172013595356833,
+        "WSAD_DT_test_AP": 0.3725172694210152,
+        "WSAD_DT_seconds_mean": 130.0818555799953
+      },
+      "GasBenchmark": {
+        "candidate_test_AP": 0.7560865981259031,
+        "FairComb_test_AP": 0.692491682446487,
+        "WSAD_DT_test_AP": 0.7153903987583021,
+        "WSAD_DT_seconds_mean": 143.0318822000001
+      },
+      "FacilityViolation": {
+        "candidate_test_AP": 0.43196842103795774,
+        "FairComb_test_AP": 0.28457841755014635,
+        "WSAD_DT_test_AP": 0.148416395307956,
+        "WSAD_DT_seconds_mean": 1365.756851900008
+      },
+      "MedicalClassificationAnomalies": {
+        "candidate_test_AP": 0.9958274585884659,
+        "FairComb_test_AP": 0.9365899045338019,
+        "WSAD_DT_test_AP": 0.9928203220121337,
+        "WSAD_DT_seconds_mean": 920.4278437200003
+      }
+    },
+    "interpretation_note": "All comparator-extension outputs are retrospective because the Replication 5 candidate outcomes had already been examined. Do not describe this as a new prospective confirmation."
+  },
+  "interpretation": "All 19-family results and added FairComb/WSAD-DT comparisons are retrospective. The candidate outcomes were examined before the pilot exclusion and comparator extension; this archive does not establish independent prospective confirmation."
+}

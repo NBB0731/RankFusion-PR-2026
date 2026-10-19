@@ -1,0 +1,267 @@
+{
+  "status": "frozen_before_replication5_model_scoring",
+  "purpose": "Fresh family-disjoint CPU confirmation of validation-AP-weighted percentile-rank fusion on 20 OddBench families unused in all seven earlier cohorts. Family selection uses metadata and exact feature-group audits only.",
+  "source": {
+    "dataset": "MacrOData-CMU/OddBench",
+    "partition": "public",
+    "official_file_count": 690,
+    "official_npz_bytes": 460948648,
+    "local_metadata_manifest": "FROZEN_METADATA_MANIFEST.json",
+    "metadata_manifest_sha256": "e92e6c1b1f11b32297dc772b5cfa3e10d9c97712c05b815f520f251c65e6c3ed"
+  },
+  "selection": {
+    "eligible_count_remaining_after_exact_group_audit": 331,
+    "selected": [
+      "LandParcelValidation",
+      "GeneAnnotationOverlap",
+      "DeliveryService",
+      "PatientStatusTracking",
+      "HealthOutcome",
+      "KidneyTransplants",
+      "SoilComposition",
+      "CodeQualityMetrics",
+      "ElectrocaloricAnomalies",
+      "FinancialPortfolioAnomalies",
+      "FraudulentSales",
+      "FootballBetting",
+      "MobileMoneyTransactions",
+      "RestaurantViolation",
+      "HatPricingRatings",
+      "FinancialCredit",
+      "LandShapeAnomaly",
+      "GasBenchmark",
+      "FacilityViolation",
+      "MedicalClassificationAnomalies"
+    ],
+    "rule": "Exclude families in all seven prior cohorts. Require 200<=n_train<=30000, n_test<=40000, at least 100 unique official-training feature groups, and after removing test feature groups that overlap official training or have conflicting test labels, at least 30 normal and 30 anomalous unique feature groups. Select 20 by metadata-only 3x3x3 round-robin bins. No model scores are used.",
+    "model_scores_used_for_selection": false,
+    "overlap_with_prior_cohorts": 0,
+    "selected_group_audits": [
+      {
+        "name": "LandParcelValidation",
+        "unique_train_groups": 1490,
+        "groupclean_test_normal": 1490,
+        "groupclean_test_anomaly": 33,
+        "excluded_train_overlap_groups": 0,
+        "excluded_test_conflict_groups": 0
+      },
+      {
+        "name": "GeneAnnotationOverlap",
+        "unique_train_groups": 1501,
+        "groupclean_test_normal": 1500,
+        "groupclean_test_anomaly": 136,
+        "excluded_train_overlap_groups": 2,
+        "excluded_test_conflict_groups": 0
+      },
+      {
+        "name": "DeliveryService",
+        "unique_train_groups": 606,
+        "groupclean_test_normal": 606,
+        "groupclean_test_anomaly": 337,
+        "excluded_train_overlap_groups": 0,
+        "excluded_test_conflict_groups": 0
+      },
+      {
+        "name": "PatientStatusTracking",
+        "unique_train_groups": 1701,
+        "groupclean_test_normal": 1695,
+        "groupclean_test_anomaly": 31,
+        "excluded_train_overlap_groups": 4,
+        "excluded_test_conflict_groups": 0
+      },
+      {
+        "name": "HealthOutcome",
+        "unique_train_groups": 985,
+        "groupclean_test_normal": 914,
+        "groupclean_test_anomaly": 240,
+        "excluded_train_overlap_groups": 84,
+        "excluded_test_conflict_groups": 3
+      },
+      {
+        "name": "KidneyTransplants",
+        "unique_train_groups": 544,
+        "groupclean_test_normal": 544,
+        "groupclean_test_anomaly": 237,
+        "excluded_train_overlap_groups": 0,
+        "excluded_test_conflict_groups": 0
+      },
+      {
+        "name": "SoilComposition",
+        "unique_train_groups": 1715,
+        "groupclean_test_normal": 1715,
+        "groupclean_test_anomaly": 60,
+        "excluded_train_overlap_groups": 0,
+        "excluded_test_conflict_groups": 0
+      },
+      {
+        "name": "CodeQualityMetrics",
+        "unique_train_groups": 787,
+        "groupclean_test_normal": 777,
+        "groupclean_test_anomaly": 232,
+        "excluded_train_overlap_groups": 17,
+        "excluded_test_conflict_groups": 4
+      },
+      {
+        "name": "ElectrocaloricAnomalies",
+        "unique_train_groups": 387,
+        "groupclean_test_normal": 387,
+        "groupclean_test_anomaly": 253,
+        "excluded_train_overlap_groups": 0,
+        "excluded_test_conflict_groups": 0
+      },
+      {
+        "name": "FinancialPortfolioAnomalies",
+        "unique_train_groups": 5910,
+        "groupclean_test_normal": 5434,
+        "groupclean_test_anomaly": 60,
+        "excluded_train_overlap_groups": 476,
+        "excluded_test_conflict_groups": 0
+      },
+      {
+        "name": "FraudulentSales",
+        "unique_train_groups": 4933,
+        "groupclean_test_normal": 4711,
+        "groupclean_test_anomaly": 1243,
+        "excluded_train_overlap_groups": 295,
+        "excluded_test_conflict_groups": 15
+      },
+      {
+        "name": "FootballBetting",
+        "unique_train_groups": 2683,
+        "groupclean_test_normal": 2647,
+        "groupclean_test_anomaly": 2115,
+        "excluded_train_overlap_groups": 38,
+        "excluded_test_conflict_groups": 8
+      },
+      {
+        "name": "MobileMoneyTransactions",
+        "unique_train_groups": 7457,
+        "groupclean_test_normal": 7457,
+        "groupclean_test_anomaly": 91,
+        "excluded_train_overlap_groups": 0,
+        "excluded_test_conflict_groups": 0
+      },
+      {
+        "name": "RestaurantViolation",
+        "unique_train_groups": 6015,
+        "groupclean_test_normal": 6017,
+        "groupclean_test_anomaly": 724,
+        "excluded_train_overlap_groups": 0,
+        "excluded_test_conflict_groups": 0
+      },
+      {
+        "name": "HatPricingRatings",
+        "unique_train_groups": 1746,
+        "groupclean_test_normal": 1746,
+        "groupclean_test_anomaly": 714,
+        "excluded_train_overlap_groups": 0,
+        "excluded_test_conflict_groups": 0
+      },
+      {
+        "name": "FinancialCredit",
+        "unique_train_groups": 4070,
+        "groupclean_test_normal": 4070,
+        "groupclean_test_anomaly": 83,
+        "excluded_train_overlap_groups": 0,
+        "excluded_test_conflict_groups": 0
+      },
+      {
+        "name": "LandShapeAnomaly",
+        "unique_train_groups": 1770,
+        "groupclean_test_normal": 1770,
+        "groupclean_test_anomaly": 490,
+        "excluded_train_overlap_groups": 1,
+        "excluded_test_conflict_groups": 0
+      },
+      {
+        "name": "GasBenchmark",
+        "unique_train_groups": 2200,
+        "groupclean_test_normal": 2201,
+        "groupclean_test_anomaly": 1599,
+        "excluded_train_overlap_groups": 0,
+        "excluded_test_conflict_groups": 0
+      },
+      {
+        "name": "FacilityViolation",
+        "unique_train_groups": 22905,
+        "groupclean_test_normal": 22905,
+        "groupclean_test_anomaly": 177,
+        "excluded_train_overlap_groups": 0,
+        "excluded_test_conflict_groups": 0
+      },
+      {
+        "name": "MedicalClassificationAnomalies",
+        "unique_train_groups": 14520,
+        "groupclean_test_normal": 14520,
+        "groupclean_test_anomaly": 2063,
+        "excluded_train_overlap_groups": 0,
+        "excluded_test_conflict_groups": 0
+      }
+    ]
+  },
+  "protocol": {
+    "unit": "Unique exact numeric feature group; identical rows are represented once. Exact feature key treats infinity as missing, normalizes signed zero, and otherwise requires exact float64 equality.",
+    "training_reference": "Collapse official normal-only training rows to unique exact feature groups. Shuffle groups by seed; use 80% as unlabeled reference U and the remaining 20% as a normal calibration pool; sample up to 50 unique normal groups without replacement.",
+    "test_group_eligibility": "From the official test partition, remove any feature group exactly matching an official training feature group and remove any feature group containing conflicting labels. Each retained group has one binary label and one representative feature vector.",
+    "support": "Sample 10 unique anomaly feature groups without replacement from the retained official test groups; remove them from validation and test.",
+    "validation_test": "Split remaining unique feature groups 50:50 with stratification by group label and seed. Use validation labels only for tuning and model/weight selection. Freeze all test predictions before scoring.",
+    "seeds": [
+      1201,
+      1202,
+      1203,
+      1204,
+      1205
+    ],
+    "preprocessing": "Replace infinities with missing. Fit median imputation and standardization on U's unique feature vectors only. Transform calibration, support, validation, and test without refitting.",
+    "primary_metric": "Average precision (AP) on one row per unique feature group"
+  },
+  "methods": {
+    "comparators": [
+      "RRFEN fuzzy-only",
+      "RRFEN-Hybrid",
+      "RBF-SVM",
+      "Random Forest",
+      "Extra Trees",
+      "HistGradientBoosting",
+      "Validation-AP maximum selector",
+      "Bootstrap-stability selector",
+      "Bootstrap-weighted rank fusion"
+    ],
+    "validation_AP_selector": "Select the expert with the largest validation AP among the six experts; deterministic listed-order tie break.",
+    "stability_selector": "For each expert, select maximum stratified-bootstrap mean AP - 2.0*bootstrap SD; 500 resamples.",
+    "rank_fusion": "For each expert, map validation and test scores to empirical percentile ranks using that expert's validation score distribution. Estimate validation AP bootstrap mean and SD from 500 stratified resamples. Set expert utility=mean AP-2.0*SD; transform utilities to softmax weights with fixed temperature 0.05; combine percentile ranks using these weights. Alpha=2 and temperature=0.05 were fixed from leave-one-family-out development on the previously inspected ADBench development cohort. No OddBench test outcomes were used to choose them."
+  },
+  "validation_search": {
+    "RBF_SVM": "C in {0.1,1,10} x gamma*n_features in {0.1,1,10}; class_weight=balanced",
+    "Random_Forest": "min_samples_leaf in {1,5,20} x max_features in {0.5,0.75,1}; 200 trees; balanced class weights",
+    "Extra_Trees": "min_samples_leaf in {1,3,10} x max_features in {0.5,1}; 300 trees; balanced class weights",
+    "HistGradientBoosting": "max_leaf_nodes in {7,15,31} x L2 in {0.1,1,10}; learning_rate=0.05, max_iter=150, min_samples_leaf=20, balanced weights, early_stopping=False",
+    "RRFEN_fuzzy_only": "normal/anomaly prototypes in {8,16,32} and local_k in {5,15,25}; fixed topology k={5,10,20}, q={0.8,0.9,0.98}; choose by validation AP",
+    "RRFEN_Hybrid": "Fit once using validation-selected RBF-SVM and Random Forest settings and the validation-selected fuzzy prototype/local_k settings; gate_C=0.1 fixed from prior development"
+  },
+  "analysis": {
+    "inference_unit": "Dataset family after averaging five group-level seed AP scores.",
+    "aggregation": "Equal-weight macro average over 20 families.",
+    "primary_metric": "Average precision (AP).",
+    "pre_specified_primary_contrasts": [
+      "Six-expert validation-AP-weighted percentile-rank fusion vs Extra Trees.",
+      "Six-expert validation-AP-weighted percentile-rank fusion vs the maximum-validation-AP selector over six classical/fuzzy experts.",
+      "Six-expert validation-AP-weighted percentile-rank fusion vs the expanded eight-expert validation-AP maximum selector, including PReNet and DevNet."
+    ],
+    "pre_specified_secondary_contrasts": [
+      "Validation-AP-weighted percentile-rank fusion vs bootstrap-stability-weighted percentile-rank fusion (tests whether the stability penalty adds value).",
+      "Validation-AP-weighted percentile-rank fusion vs equal-weight percentile-rank consensus.",
+      "Validation-AP-weighted six-expert fusion vs four-classical-expert validation-AP-weighted fusion."
+    ],
+    "inference": "Two-sided paired Wilcoxon signed-rank with Holm correction across all six pre-specified contrasts; report paired family-bootstrap 95% confidence intervals and wins/ties/losses. Five seeds are averaged within family; seeds are not independent inference units.",
+    "protocol_note": "The AP-weighted rank-fusion method and all six contrasts are fixed before scoring this unused cohort. Validation labels determine expert weights. Test labels are used only after all prediction arrays and code hashes are frozen. No method variant or hyperparameter may be changed after this protocol is frozen.",
+    "runtime": "CPU only."
+  },
+  "integrity": {
+    "test_predictions_frozen_before_test_scoring": true,
+    "exact_feature_group_overlap_across_reference_support_validation_test": false,
+    "conflicting_test_feature_groups_included": false,
+    "report_all_outcomes": true,
+    "distinction": "This is a few-shot supervised adaptation protocol. It does not validate the original F-DK Mamdani implementation."
+  }
+}

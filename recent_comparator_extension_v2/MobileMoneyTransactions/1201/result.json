@@ -1,0 +1,60 @@
+{
+  "status": "complete",
+  "dataset": "MobileMoneyTransactions",
+  "seed": 1201,
+  "protocol_sha256": "7658af0889a3a43687f241636ea62b6e84eac2d7fbf570ae9c6832c91fcedf13",
+  "official_source_commits": {
+    "WSAD-DT": "b59c4aa4595fd24462e9c6852c1fc792a0dc7d0d",
+    "FairComb": "1309b7780e61c96998246135348bbfdfb2939b01"
+  },
+  "metrics": {
+    "candidate_validation_AP": 0.024914222397542495,
+    "candidate_test_AP": 0.020669465082364714,
+    "FairComb_test_AP": 0.02277007689757903,
+    "WSAD_DT_validation_AP": 0.015152141912299119,
+    "WSAD_DT_test_AP": 0.02251855398476268
+  },
+  "faircomb": {
+    "selected_experts": [
+      "RRFEN fuzzy-only",
+      "HistGradientBoosting",
+      "Extra Trees"
+    ],
+    "selected_indices": [
+      4,
+      3,
+      2
+    ],
+    "validation_top_k": 40,
+    "score_parity": 0.07096049965230689,
+    "ep_before": 0.1385121703006832,
+    "ep_after": 0.0900387584055487,
+    "correction_applied": true,
+    "fallback_fixed_topk": 0.15,
+    "variant": "WtSR",
+    "ep_combination_rule": "max over selected expert scores",
+    "final_combination": "mean",
+    "gselect_z_norm_validation_AP": 0.02354001964563596
+  },
+  "wsad_dt": {
+    "official_defaults": {
+      "n_ensemble": 5,
+      "batch_size": 64,
+      "epochs": 100,
+      "seed": 1201,
+      "parallel": false
+    },
+    "fit_and_score_seconds": 474.4881718000106,
+    "train_rows": 6025
+  },
+  "counts": {
+    "unlabeled_reference": 5965,
+    "known_normal_support": 50,
+    "known_anomaly_support": 10,
+    "validation": 3769,
+    "test": 3769
+  },
+  "test_labels_used_in_model_or_fusion_selection": false,
+  "prediction_sha256": "5b3239c8f44f1b30435caad8f52e7b12534899a1cc6d257d005982edeac4fa53",
+  "runner_sha256": "342f26440c4481a2dfe0d4ecfb69928e4c96d38051e3ab31d63f2aeb60c7977f"
+}

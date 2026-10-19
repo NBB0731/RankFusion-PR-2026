@@ -1,0 +1,64 @@
+{
+  "status": "complete",
+  "dataset": "GasBenchmark",
+  "seed": 1202,
+  "protocol_sha256": "7658af0889a3a43687f241636ea62b6e84eac2d7fbf570ae9c6832c91fcedf13",
+  "official_source_commits": {
+    "WSAD-DT": "b59c4aa4595fd24462e9c6852c1fc792a0dc7d0d",
+    "FairComb": "1309b7780e61c96998246135348bbfdfb2939b01"
+  },
+  "metrics": {
+    "candidate_validation_AP": 0.7397676887718134,
+    "candidate_test_AP": 0.7416488752507934,
+    "FairComb_test_AP": 0.6979188622436207,
+    "WSAD_DT_validation_AP": 0.6903244614554459,
+    "WSAD_DT_test_AP": 0.7010744464458329
+  },
+  "faircomb": {
+    "selected_experts": [
+      "RBF-SVM",
+      "RRFEN fuzzy-only",
+      "HistGradientBoosting",
+      "Random Forest",
+      "RRFEN-Hybrid"
+    ],
+    "selected_indices": [
+      0,
+      4,
+      3,
+      1,
+      5
+    ],
+    "validation_top_k": 794,
+    "score_parity": 0.1148510467025109,
+    "ep_before": 0.2527185392030437,
+    "ep_after": 0.24026142063136924,
+    "correction_applied": true,
+    "fallback_fixed_topk": null,
+    "variant": "WtSR",
+    "ep_combination_rule": "max over selected expert scores",
+    "final_combination": "mean",
+    "gselect_z_norm_validation_AP": 0.6972563642151389
+  },
+  "wsad_dt": {
+    "official_defaults": {
+      "n_ensemble": 5,
+      "batch_size": 64,
+      "epochs": 100,
+      "seed": 1202,
+      "parallel": false
+    },
+    "fit_and_score_seconds": 139.9944528999913,
+    "train_rows": 1820
+  },
+  "counts": {
+    "unlabeled_reference": 1760,
+    "known_normal_support": 50,
+    "known_anomaly_support": 10,
+    "validation": 1895,
+    "test": 1895
+  },
+  "test_labels_used_in_model_or_fusion_selection": false,
+  "prediction_sha256": "7cca7cda9406c8455b2e744f495ffcb4a019d214a61201ba6e7beec08de4d5a1",
+  "runner_sha256": "342f26440c4481a2dfe0d4ecfb69928e4c96d38051e3ab31d63f2aeb60c7977f"
+}

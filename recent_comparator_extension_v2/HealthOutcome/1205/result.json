@@ -1,0 +1,61 @@
+{
+  "status": "complete",
+  "dataset": "HealthOutcome",
+  "seed": 1205,
+  "protocol_sha256": "7658af0889a3a43687f241636ea62b6e84eac2d7fbf570ae9c6832c91fcedf13",
+  "official_source_commits": {
+    "WSAD-DT": "b59c4aa4595fd24462e9c6852c1fc792a0dc7d0d",
+    "FairComb": "1309b7780e61c96998246135348bbfdfb2939b01"
+  },
+  "metrics": {
+    "candidate_validation_AP": 0.7721461065152858,
+    "candidate_test_AP": 0.7676028510475708,
+    "FairComb_test_AP": 0.7098186032467851,
+    "WSAD_DT_validation_AP": 0.6675125442579934,
+    "WSAD_DT_test_AP": 0.6216641702983552
+  },
+  "faircomb": {
+    "selected_experts": [
+      "Random Forest",
+      "RRFEN fuzzy-only",
+      "HistGradientBoosting",
+      "RBF-SVM"
+    ],
+    "selected_indices": [
+      1,
+      4,
+      3,
+      0
+    ],
+    "validation_top_k": 115,
+    "score_parity": 0.06460193683099102,
+    "ep_before": 0.18961835107633773,
+    "ep_after": 0.17896207913125606,
+    "correction_applied": true,
+    "fallback_fixed_topk": null,
+    "variant": "WtSR",
+    "ep_combination_rule": "max over selected expert scores",
+    "final_combination": "mean",
+    "gselect_z_norm_validation_AP": 0.7382622232894406
+  },
+  "wsad_dt": {
+    "official_defaults": {
+      "n_ensemble": 5,
+      "batch_size": 64,
+      "epochs": 100,
+      "seed": 1205
+    },
+    "fit_and_score_seconds": 68.38342259998899,
+    "train_rows": 848
+  },
+  "counts": {
+    "unlabeled_reference": 788,
+    "known_normal_support": 50,
+    "known_anomaly_support": 10,
+    "validation": 572,
+    "test": 572
+  },
+  "test_labels_used_in_model_or_fusion_selection": false,
+  "prediction_sha256": "3b6e3dcf371b4ba6928c92d166b40b14535641abe760cc18f2b80487ef785512",
+  "runner_sha256": "9925c5e25ed334f35172a8caa52f53afd1a8a9c430ff7c203f75f8035d8e139c"
+}

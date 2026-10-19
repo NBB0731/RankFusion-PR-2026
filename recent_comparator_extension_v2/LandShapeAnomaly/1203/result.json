@@ -1,0 +1,56 @@
+{
+  "status": "complete",
+  "dataset": "LandShapeAnomaly",
+  "seed": 1203,
+  "protocol_sha256": "7658af0889a3a43687f241636ea62b6e84eac2d7fbf570ae9c6832c91fcedf13",
+  "official_source_commits": {
+    "WSAD-DT": "b59c4aa4595fd24462e9c6852c1fc792a0dc7d0d",
+    "FairComb": "1309b7780e61c96998246135348bbfdfb2939b01"
+  },
+  "metrics": {
+    "candidate_validation_AP": 0.4725581115893064,
+    "candidate_test_AP": 0.4310497245865895,
+    "FairComb_test_AP": 0.40721024039284326,
+    "WSAD_DT_validation_AP": 0.4012469088679257,
+    "WSAD_DT_test_AP": 0.3678341799665588
+  },
+  "faircomb": {
+    "selected_experts": [
+      "Random Forest"
+    ],
+    "selected_indices": [
+      1
+    ],
+    "validation_top_k": 240,
+    "score_parity": 0.0,
+    "ep_before": 0.0,
+    "ep_after": 0.0,
+    "correction_applied": false,
+    "fallback_fixed_topk": null,
+    "variant": "Z-Norm mean",
+    "ep_combination_rule": "max over selected expert scores",
+    "final_combination": "mean",
+    "gselect_z_norm_validation_AP": 0.45000753923759457
+  },
+  "wsad_dt": {
+    "official_defaults": {
+      "n_ensemble": 5,
+      "batch_size": 64,
+      "epochs": 100,
+      "seed": 1203,
+      "parallel": false
+    },
+    "fit_and_score_seconds": 153.2905061999918,
+    "train_rows": 1476
+  },
+  "counts": {
+    "unlabeled_reference": 1416,
+    "known_normal_support": 50,
+    "known_anomaly_support": 10,
+    "validation": 1125,
+    "test": 1125
+  },
+  "test_labels_used_in_model_or_fusion_selection": false,
+  "prediction_sha256": "02a0afeb7cce4c0a6dbb448b5252c6cb6bda36f3f783c2e0cb6df661fa678644",
+  "runner_sha256": "342f26440c4481a2dfe0d4ecfb69928e4c96d38051e3ab31d63f2aeb60c7977f"
+}

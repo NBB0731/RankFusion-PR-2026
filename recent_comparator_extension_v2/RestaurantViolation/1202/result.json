@@ -1,0 +1,64 @@
+{
+  "status": "complete",
+  "dataset": "RestaurantViolation",
+  "seed": 1202,
+  "protocol_sha256": "7658af0889a3a43687f241636ea62b6e84eac2d7fbf570ae9c6832c91fcedf13",
+  "official_source_commits": {
+    "WSAD-DT": "b59c4aa4595fd24462e9c6852c1fc792a0dc7d0d",
+    "FairComb": "1309b7780e61c96998246135348bbfdfb2939b01"
+  },
+  "metrics": {
+    "candidate_validation_AP": 0.9542961412140059,
+    "candidate_test_AP": 0.9428837386390574,
+    "FairComb_test_AP": 0.8112275781158688,
+    "WSAD_DT_validation_AP": 0.41499447271102974,
+    "WSAD_DT_test_AP": 0.40222768054313757
+  },
+  "faircomb": {
+    "selected_experts": [
+      "RRFEN-Hybrid",
+      "RRFEN fuzzy-only",
+      "RBF-SVM",
+      "Random Forest",
+      "HistGradientBoosting"
+    ],
+    "selected_indices": [
+      5,
+      4,
+      0,
+      1,
+      3
+    ],
+    "validation_top_k": 357,
+    "score_parity": 0.1583953400708643,
+    "ep_before": 0.3008690082444916,
+    "ep_after": 0.24357445407482942,
+    "correction_applied": true,
+    "fallback_fixed_topk": null,
+    "variant": "WtSR",
+    "ep_combination_rule": "max over selected expert scores",
+    "final_combination": "mean",
+    "gselect_z_norm_validation_AP": 0.815176551114932
+  },
+  "wsad_dt": {
+    "official_defaults": {
+      "n_ensemble": 5,
+      "batch_size": 64,
+      "epochs": 100,
+      "seed": 1202,
+      "parallel": false
+    },
+    "fit_and_score_seconds": 351.3612445999752,
+    "train_rows": 4872
+  },
+  "counts": {
+    "unlabeled_reference": 4812,
+    "known_normal_support": 50,
+    "known_anomaly_support": 10,
+    "validation": 3365,
+    "test": 3366
+  },
+  "test_labels_used_in_model_or_fusion_selection": false,
+  "prediction_sha256": "e3113d4e248db7140514ba0570a63440f402823a83507721609aec06f99e2252",
+  "runner_sha256": "342f26440c4481a2dfe0d4ecfb69928e4c96d38051e3ab31d63f2aeb60c7977f"
+}

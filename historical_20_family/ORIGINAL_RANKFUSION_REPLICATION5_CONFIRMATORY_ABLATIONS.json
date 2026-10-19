@@ -1,0 +1,1603 @@
+{
+  "status": "frozen_replication5_confirmatory_test_scored_after_outputs_frozen",
+  "protocol_sha256": "c002b0b64f83a52fff24491db8b4d1cb64b316faa64bc88b5c08fbed58301484",
+  "n_families": 20,
+  "seeds_per_family": 5,
+  "inference_unit": "family after seed averaging",
+  "primary_metric": "AP",
+  "variant_definitions": {
+    "rank": "validation empirical percentiles",
+    "zscore": "validation mean and sample SD normalization",
+    "meanAP": "softmax of mean stratified-bootstrap validation AP; temperature 0.05",
+    "bootstrap": "softmax of mean validation AP minus 2 bootstrap SD; temperature 0.05",
+    "no_fuzzy": "four classical experts only"
+  },
+  "macro_metrics": {
+    "rank_uniform_6": {
+      "macro_AP": 0.6111766575492146,
+      "sd_between_families": 0.30589166163235987,
+      "family_bootstrap_95CI": [
+        0.47872946044079734,
+        0.7408039469792512
+      ],
+      "macro_AUROC": 0.8754894586504021,
+      "per_family_AP": [
+        0.8011897539845684,
+        0.35056751853164414,
+        0.6166633378159713,
+        0.17275961401432316,
+        0.7418716564206432,
+        0.856574687559146,
+        1.0,
+        0.5069361553434026,
+        1.0,
+        0.12266830910738033,
+        0.6040441105637294,
+        0.7989064415195545,
+        0.033822504099397334,
+        0.7464252963283246,
+        0.998200380774309,
+        0.3819239257471477,
+        0.42953070484362954,
+        0.7201061450720508,
+        0.3457251075291909,
+        0.9956175017298774
+      ]
+    },
+    "rank_meanAP_6": {
+      "macro_AP": 0.642297607650541,
+      "sd_between_families": 0.3037809235209731,
+      "family_bootstrap_95CI": [
+        0.5108347521586514,
+        0.7675087157828853
+      ],
+      "macro_AUROC": 0.877345473680084,
+      "per_family_AP": [
+        0.7946040568429884,
+        0.36067806557204846,
+        0.6366605972779952,
+        0.15617312432258176,
+        0.767531497963476,
+        0.8625960793347989,
+        1.0,
+        0.5169697265708698,
+        1.0,
+        0.1671754947611126,
+        0.6319248402234845,
+        0.8086148920826733,
+        0.0359545435499762,
+        0.9494100355764384,
+        0.9992276795582204,
+        0.540101822220467,
+        0.4344472194013644,
+        0.7560865981259031,
+        0.43196842103795774,
+        0.9958274585884659
+      ]
+    },
+    "rank_bootstrap_6": {
+      "macro_AP": 0.6410507484027788,
+      "sd_between_families": 0.3060312847921352,
+      "family_bootstrap_95CI": [
+        0.5058920466792195,
+        0.7670832680965058
+      ],
+      "macro_AUROC": 0.8805864774193071,
+      "per_family_AP": [
+        0.7946882998280028,
+        0.3594258899895907,
+        0.6371931968686486,
+        0.15606099316179,
+        0.7685771068842691,
+        0.8626289493581224,
+        1.0,
+        0.5158252208695282,
+        1.0,
+        0.14484941928352116,
+        0.6318423338581824,
+        0.8087272978186382,
+        0.033711800089434814,
+        0.9499906018746529,
+        0.9993099569343025,
+        0.5368637992912504,
+        0.4344181635591286,
+        0.7566056406213733,
+        0.43442180233792654,
+        0.9958744954272147
+      ]
+    },
+    "rank_meanAP_4_no_fuzzy": {
+      "macro_AP": 0.6339012311179866,
+      "sd_between_families": 0.31314862797096477,
+      "family_bootstrap_95CI": [
+        0.49651099785417724,
+        0.7629031682410322
+      ],
+      "macro_AUROC": 0.8758335154566032,
+      "per_family_AP": [
+        0.8015433541239394,
+        0.3573690233057888,
+        0.6335085260066972,
+        0.1407346217021663,
+        0.7647677569714972,
+        0.8549347411962651,
+        1.0,
+        0.5063545997106228,
+        1.0,
+        0.10394581817872066,
+        0.6312269336826635,
+        0.8057197968737846,
+        0.03994002393037547,
+        0.951670132241689,
+        0.9987214520518318,
+        0.5357671262509255,
+        0.4234914795982804,
+        0.7567781381871665,
+        0.37476132675965956,
+        0.9967897715876607
+      ]
+    },
+    "zscore_uniform_6": {
+      "macro_AP": 0.6279412784176645,
+      "sd_between_families": 0.30351613323534266,
+      "family_bootstrap_95CI": [
+        0.49554652365842966,
+        0.7525050619077956
+      ],
+      "macro_AUROC": 0.8771851250936183,
+      "per_family_AP": [
+        0.7903680546811831,
+        0.3554248137554614,
+        0.6193705409043664,
+        0.15463599242047618,
+        0.7571012749476262,
+        0.8554114219389923,
+        1.0,
+        0.5123825967072616,
+        1.0,
+        0.14931058588551088,
+        0.5959843357152217,
+        0.7956084819778089,
+        0.03269673569634476,
+        0.8700616196394936,
+        0.9988917178247017,
+        0.5152343641898396,
+        0.4338671359600596,
+        0.7412381913731733,
+        0.384741897200292,
+        0.9964958075354738
+      ]
+    },
+    "zscore_meanAP_6": {
+      "macro_AP": 0.6425487414122527,
+      "sd_between_families": 0.3024961009151609,
+      "family_bootstrap_95CI": [
+        0.5107248356547692,
+        0.7676091158868216
+      ],
+      "macro_AUROC": 0.8771691053957991,
+      "per_family_AP": [
+        0.7744043283580175,
+        0.35842278730782406,
+        0.6298705597146135,
+        0.1660695792636268,
+        0.7737522120016008,
+        0.857418325625962,
+        1.0,
+        0.5198172639621713,
+        1.0,
+        0.1730236761195467,
+        0.6210801039847008,
+        0.8066243176484079,
+        0.032799339791728235,
+        0.9494826684193475,
+        0.9995537187545865,
+        0.5411663711485201,
+        0.4376954765152698,
+        0.7766596233873468,
+        0.4365663598065065,
+        0.9965681164352775
+      ]
+    },
+    "zscore_bootstrap_6": {
+      "macro_AP": 0.6400986953427352,
+      "sd_between_families": 0.30550505707674597,
+      "family_bootstrap_95CI": [
+        0.5045006186751487,
+        0.7678889367992504
+      ],
+      "macro_AUROC": 0.8802853892199497,
+      "per_family_AP": [
+        0.7647662277084206,
+        0.3605637998359215,
+        0.6296695361646603,
+        0.1380806910731644,
+        0.7746702483173885,
+        0.8571177441087137,
+        1.0,
+        0.5200444418452337,
+        1.0,
+        0.1604345034159981,
+        0.6208728220861164,
+        0.8070439813862731,
+        0.03410019794540563,
+        0.9497459918531241,
+        0.999591023600021,
+        0.5338349455950089,
+        0.4372732517382392,
+        0.7771491137177309,
+        0.4404197527830272,
+        0.9965956336802592
+      ]
+    },
+    "rank_bootstrap_4_no_fuzzy": {
+      "macro_AP": 0.6338595371404689,
+      "sd_between_families": 0.3127641237235382,
+      "family_bootstrap_95CI": [
+        0.4956379846958596,
+        0.7647118849781812
+      ],
+      "macro_AUROC": 0.8785528428129445,
+      "per_family_AP": [
+        0.8026069648516323,
+        0.3581613710156607,
+        0.6331417468676375,
+        0.1624034349708266,
+        0.767322430276008,
+        0.853696046252194,
+        1.0,
+        0.5051302311139636,
+        1.0,
+        0.09494277468870838,
+        0.631171257333307,
+        0.8059755935106866,
+        0.04290897429895772,
+        0.9522568829777827,
+        0.9988907269908566,
+        0.5320123342517252,
+        0.4216390997523004,
+        0.7575217173355429,
+        0.36059598864988873,
+        0.9968131676717003
+      ]
+    },
+    "Extra Trees": {
+      "macro_AP": 0.6138552250799317,
+      "sd_between_families": 0.31008122979663577,
+      "family_bootstrap_95CI": [
+        0.47750209215976047,
+        0.7428588481750573
+      ],
+      "macro_AUROC": 0.8657154592782454,
+      "per_family_AP": [
+        0.7539697469269372,
+        0.32065222300008467,
+        0.623641855538569,
+        0.13033223290796442,
+        0.7350177642007746,
+        0.8310379943956328,
+        1.0,
+        0.4947208626674283,
+        1.0,
+        0.10136558923526917,
+        0.5693612782100578,
+        0.7742831321285456,
+        0.03321079185127156,
+        0.8795475224577581,
+        0.9995748090458909,
+        0.5173701852707897,
+        0.3884467862496941,
+        0.7276828449168737,
+        0.3994116213589433,
+        0.9974772612361471
+      ]
+    },
+    "PReNet": {
+      "macro_AP": 0.5230876348104819,
+      "sd_between_families": 0.33842431807159334,
+      "family_bootstrap_95CI": [
+        0.3777846994174996,
+        0.6681033886036278
+      ],
+      "macro_AUROC": 0.7496778920503543,
+      "per_family_AP": [
+        0.7311190830066483,
+        0.2978398827722321,
+        0.5818087196911318,
+        0.10572391953927332,
+        0.6627813927809675,
+        0.7479782808278999,
+        1.0,
+        0.34142024703266716,
+        1.0,
+        0.08550049887819433,
+        0.5489693170956228,
+        0.7480479864235763,
+        0.015511211645301892,
+        0.1635971182376561,
+        0.9984228851397153,
+        0.3132480847088114,
+        0.26674361909469246,
+        0.7058663929217486,
+        0.1596864527251176,
+        0.9874876036883806
+      ]
+    },
+    "DevNet": {
+      "macro_AP": 0.5039354885706989,
+      "sd_between_families": 0.33959816780069996,
+      "family_bootstrap_95CI": [
+        0.361081792847143,
+        0.6495526595215675
+      ],
+      "macro_AUROC": 0.8077769579055134,
+      "per_family_AP": [
+        0.30254147678166704,
+        0.21785804042641108,
+        0.4640012553287501,
+        0.11844199456095542,
+        0.7822927023431858,
+        0.8166048218716913,
+        1.0,
+        0.4602423864876227,
+        1.0,
+        0.0726270969942314,
+        0.5219386401233642,
+        0.7330166157689979,
+        0.016274417608214395,
+        0.1032650967710865,
+        0.9058859066925686,
+        0.4123730717563424,
+        0.35401284658334387,
+        0.6911868398641896,
+        0.11729718401469758,
+        0.9888493774366598
+      ]
+    },
+    "six_expert_validation_selector": {
+      "macro_AP": 0.6286030942685774,
+      "sd_between_families": 0.3151315808390866,
+      "family_bootstrap_95CI": [
+        0.49121860861176847,
+        0.7577673757264589
+      ],
+      "macro_AUROC": 0.8625948289795383,
+      "per_family_AP": [
+        0.771959047945959,
+        0.33621166302363426,
+        0.6289505980278383,
+        0.0931453909230149,
+        0.7739070452035037,
+        0.8438532425269762,
+        1.0,
+        0.5102534933582205,
+        1.0,
+        0.1400650630328221,
+        0.6157204813647343,
+        0.8028465787714889,
+        0.02304799737442383,
+        0.9509107822649673,
+        0.9997305251916784,
+        0.5048915430335194,
+        0.42168220877215257,
+        0.7520367305165159,
+        0.4053722328039532,
+        0.9974772612361471
+      ]
+    },
+    "expanded_8_expert_validation_selector": {
+      "macro_AP": 0.6285199133926023,
+      "sd_between_families": 0.31566256626542466,
+      "family_bootstrap_95CI": [
+        0.4910708431890352,
+        0.7584013303937808
+      ],
+      "macro_AUROC": 0.8592223575682295,
+      "per_family_AP": [
+        0.7693099326277425,
+        0.33621166302363426,
+        0.6272349365031183,
+        0.0931453909230149,
+        0.7899969935689984,
+        0.8438532425269762,
+        1.0,
+        0.5028866388389547,
+        1.0,
+        0.1400650630328221,
+        0.6098609818631445,
+        0.8028465787714889,
+        0.02288556235321667,
+        0.9509107822649673,
+        0.9997305251916784,
+        0.5048915430335194,
+        0.42168220877215257,
+        0.7520367305165159,
+        0.4053722328039532,
+        0.9974772612361471
+      ]
+    }
+  },
+  "pre_specified_paired_comparisons": [
+    {
+      "contrast": "rank_meanAP_6 vs Extra Trees",
+      "mean_delta_AP": 0.028442382570609503,
+      "paired_family_bootstrap_95CI": [
+        0.01913945879568467,
+        0.038027047677242236
+      ],
+      "wins_ties_losses": [
+        16,
+        2,
+        2
+      ],
+      "wilcoxon_p_raw": 0.0003270126629328652,
+      "wilcoxon_p_holm_6": 0.0019620759775971913
+    },
+    {
+      "contrast": "rank_meanAP_6 vs six_expert_validation_selector",
+      "mean_delta_AP": 0.013694513381963614,
+      "paired_family_bootstrap_95CI": [
+        0.007110062473322052,
+        0.021133912055911176
+      ],
+      "wins_ties_losses": [
+        14,
+        2,
+        4
+      ],
+      "wilcoxon_p_raw": 0.001369747573348664,
+      "wilcoxon_p_holm_6": 0.00684873786674332
+    },
+    {
+      "contrast": "rank_meanAP_6 vs expanded_8_expert_validation_selector",
+      "mean_delta_AP": 0.013777694257938839,
+      "paired_family_bootstrap_95CI": [
+        0.0063259959835073425,
+        0.02179925268170331
+      ],
+      "wins_ties_losses": [
+        14,
+        2,
+        4
+      ],
+      "wilcoxon_p_raw": 0.003285842366732921,
+      "wilcoxon_p_holm_6": 0.009887941772029507
+    },
+    {
+      "contrast": "rank_meanAP_6 vs rank_bootstrap_6",
+      "mean_delta_AP": 0.0012468592477622394,
+      "paired_family_bootstrap_95CI": [
+        -0.00024370018767371935,
+        0.003740771418165832
+      ],
+      "wins_ties_losses": [
+        8,
+        2,
+        10
+      ],
+      "wilcoxon_p_raw": 0.8446284810712963,
+      "wilcoxon_p_holm_6": 0.8446284810712963
+    },
+    {
+      "contrast": "rank_meanAP_6 vs rank_uniform_6",
+      "mean_delta_AP": 0.031120950101326594,
+      "paired_family_bootstrap_95CI": [
+        0.010349312119230725,
+        0.057714550765971685
+      ],
+      "wins_ties_losses": [
+        16,
+        2,
+        2
+      ],
+      "wilcoxon_p_raw": 0.0024719854430073768,
+      "wilcoxon_p_holm_6": 0.009887941772029507
+    },
+    {
+      "contrast": "rank_meanAP_6 vs rank_meanAP_4_no_fuzzy",
+      "mean_delta_AP": 0.008396376532554381,
+      "paired_family_bootstrap_95CI": [
+        0.001622396527472171,
+        0.01718735741019913
+      ],
+      "wins_ties_losses": [
+        13,
+        2,
+        5
+      ],
+      "wilcoxon_p_raw": 0.022231238286019243,
+      "wilcoxon_p_holm_6": 0.04446247657203849
+    }
+  ],
+  "family_level_AP": {
+    "rank_uniform_6": {
+      "LandParcelValidation": 0.8011897539845684,
+      "GeneAnnotationOverlap": 0.35056751853164414,
+      "DeliveryService": 0.6166633378159713,
+      "PatientStatusTracking": 0.17275961401432316,
+      "HealthOutcome": 0.7418716564206432,
+      "KidneyTransplants": 0.856574687559146,
+      "SoilComposition": 1.0,
+      "CodeQualityMetrics": 0.5069361553434026,
+      "ElectrocaloricAnomalies": 1.0,
+      "FinancialPortfolioAnomalies": 0.12266830910738033,
+      "FraudulentSales": 0.6040441105637294,
+      "FootballBetting": 0.7989064415195545,
+      "MobileMoneyTransactions": 0.033822504099397334,
+      "RestaurantViolation": 0.7464252963283246,
+      "HatPricingRatings": 0.998200380774309,
+      "FinancialCredit": 0.3819239257471477,
+      "LandShapeAnomaly": 0.42953070484362954,
+      "GasBenchmark": 0.7201061450720508,
+      "FacilityViolation": 0.3457251075291909,
+      "MedicalClassificationAnomalies": 0.9956175017298774
+    },
+    "rank_meanAP_6": {
+      "LandParcelValidation": 0.7946040568429884,
+      "GeneAnnotationOverlap": 0.36067806557204846,
+      "DeliveryService": 0.6366605972779952,
+      "PatientStatusTracking": 0.15617312432258176,
+      "HealthOutcome": 0.767531497963476,
+      "KidneyTransplants": 0.8625960793347989,
+      "SoilComposition": 1.0,
+      "CodeQualityMetrics": 0.5169697265708698,
+      "ElectrocaloricAnomalies": 1.0,
+      "FinancialPortfolioAnomalies": 0.1671754947611126,
+      "FraudulentSales": 0.6319248402234845,
+      "FootballBetting": 0.8086148920826733,
+      "MobileMoneyTransactions": 0.0359545435499762,
+      "RestaurantViolation": 0.9494100355764384,
+      "HatPricingRatings": 0.9992276795582204,
+      "FinancialCredit": 0.540101822220467,
+      "LandShapeAnomaly": 0.4344472194013644,
+      "GasBenchmark": 0.7560865981259031,
+      "FacilityViolation": 0.43196842103795774,
+      "MedicalClassificationAnomalies": 0.9958274585884659
+    },
+    "rank_bootstrap_6": {
+      "LandParcelValidation": 0.7946882998280028,
+      "GeneAnnotationOverlap": 0.3594258899895907,
+      "DeliveryService": 0.6371931968686486,
+      "PatientStatusTracking": 0.15606099316179,
+      "HealthOutcome": 0.7685771068842691,
+      "KidneyTransplants": 0.8626289493581224,
+      "SoilComposition": 1.0,
+      "CodeQualityMetrics": 0.5158252208695282,
+      "ElectrocaloricAnomalies": 1.0,
+      "FinancialPortfolioAnomalies": 0.14484941928352116,
+      "FraudulentSales": 0.6318423338581824,
+      "FootballBetting": 0.8087272978186382,
+      "MobileMoneyTransactions": 0.033711800089434814,
+      "RestaurantViolation": 0.9499906018746529,
+      "HatPricingRatings": 0.9993099569343025,
+      "FinancialCredit": 0.5368637992912504,
+      "LandShapeAnomaly": 0.4344181635591286,
+      "GasBenchmark": 0.7566056406213733,
+      "FacilityViolation": 0.43442180233792654,
+      "MedicalClassificationAnomalies": 0.9958744954272147
+    },
+    "rank_meanAP_4_no_fuzzy": {
+      "LandParcelValidation": 0.8015433541239394,
+      "GeneAnnotationOverlap": 0.3573690233057888,
+      "DeliveryService": 0.6335085260066972,
+      "PatientStatusTracking": 0.1407346217021663,
+      "HealthOutcome": 0.7647677569714972,
+      "KidneyTransplants": 0.8549347411962651,
+      "SoilComposition": 1.0,
+      "CodeQualityMetrics": 0.5063545997106228,
+      "ElectrocaloricAnomalies": 1.0,
+      "FinancialPortfolioAnomalies": 0.10394581817872066,
+      "FraudulentSales": 0.6312269336826635,
+      "FootballBetting": 0.8057197968737846,
+      "MobileMoneyTransactions": 0.03994002393037547,
+      "RestaurantViolation": 0.951670132241689,
+      "HatPricingRatings": 0.9987214520518318,
+      "FinancialCredit": 0.5357671262509255,
+      "LandShapeAnomaly": 0.4234914795982804,
+      "GasBenchmark": 0.7567781381871665,
+      "FacilityViolation": 0.37476132675965956,
+      "MedicalClassificationAnomalies": 0.9967897715876607
+    },
+    "zscore_uniform_6": {
+      "LandParcelValidation": 0.7903680546811831,
+      "GeneAnnotationOverlap": 0.3554248137554614,
+      "DeliveryService": 0.6193705409043664,
+      "PatientStatusTracking": 0.15463599242047618,
+      "HealthOutcome": 0.7571012749476262,
+      "KidneyTransplants": 0.8554114219389923,
+      "SoilComposition": 1.0,
+      "CodeQualityMetrics": 0.5123825967072616,
+      "ElectrocaloricAnomalies": 1.0,
+      "FinancialPortfolioAnomalies": 0.14931058588551088,
+      "FraudulentSales": 0.5959843357152217,
+      "FootballBetting": 0.7956084819778089,
+      "MobileMoneyTransactions": 0.03269673569634476,
+      "RestaurantViolation": 0.8700616196394936,
+      "HatPricingRatings": 0.9988917178247017,
+      "FinancialCredit": 0.5152343641898396,
+      "LandShapeAnomaly": 0.4338671359600596,
+      "GasBenchmark": 0.7412381913731733,
+      "FacilityViolation": 0.384741897200292,
+      "MedicalClassificationAnomalies": 0.9964958075354738
+    },
+    "zscore_meanAP_6": {
+      "LandParcelValidation": 0.7744043283580175,
+      "GeneAnnotationOverlap": 0.35842278730782406,
+      "DeliveryService": 0.6298705597146135,
+      "PatientStatusTracking": 0.1660695792636268,
+      "HealthOutcome": 0.7737522120016008,
+      "KidneyTransplants": 0.857418325625962,
+      "SoilComposition": 1.0,
+      "CodeQualityMetrics": 0.5198172639621713,
+      "ElectrocaloricAnomalies": 1.0,
+      "FinancialPortfolioAnomalies": 0.1730236761195467,
+      "FraudulentSales": 0.6210801039847008,
+      "FootballBetting": 0.8066243176484079,
+      "MobileMoneyTransactions": 0.032799339791728235,
+      "RestaurantViolation": 0.9494826684193475,
+      "HatPricingRatings": 0.9995537187545865,
+      "FinancialCredit": 0.5411663711485201,
+      "LandShapeAnomaly": 0.4376954765152698,
+      "GasBenchmark": 0.7766596233873468,
+      "FacilityViolation": 0.4365663598065065,
+      "MedicalClassificationAnomalies": 0.9965681164352775
+    },
+    "zscore_bootstrap_6": {
+      "LandParcelValidation": 0.7647662277084206,
+      "GeneAnnotationOverlap": 0.3605637998359215,
+      "DeliveryService": 0.6296695361646603,
+      "PatientStatusTracking": 0.1380806910731644,
+      "HealthOutcome": 0.7746702483173885,
+      "KidneyTransplants": 0.8571177441087137,
+      "SoilComposition": 1.0,
+      "CodeQualityMetrics": 0.5200444418452337,
+      "ElectrocaloricAnomalies": 1.0,
+      "FinancialPortfolioAnomalies": 0.1604345034159981,
+      "FraudulentSales": 0.6208728220861164,
+      "FootballBetting": 0.8070439813862731,
+      "MobileMoneyTransactions": 0.03410019794540563,
+      "RestaurantViolation": 0.9497459918531241,
+      "HatPricingRatings": 0.999591023600021,
+      "FinancialCredit": 0.5338349455950089,
+      "LandShapeAnomaly": 0.4372732517382392,
+      "GasBenchmark": 0.7771491137177309,
+      "FacilityViolation": 0.4404197527830272,
+      "MedicalClassificationAnomalies": 0.9965956336802592
+    },
+    "rank_bootstrap_4_no_fuzzy": {
+      "LandParcelValidation": 0.8026069648516323,
+      "GeneAnnotationOverlap": 0.3581613710156607,
+      "DeliveryService": 0.6331417468676375,
+      "PatientStatusTracking": 0.1624034349708266,
+      "HealthOutcome": 0.767322430276008,
+      "KidneyTransplants": 0.853696046252194,
+      "SoilComposition": 1.0,
+      "CodeQualityMetrics": 0.5051302311139636,
+      "ElectrocaloricAnomalies": 1.0,
+      "FinancialPortfolioAnomalies": 0.09494277468870838,
+      "FraudulentSales": 0.631171257333307,
+      "FootballBetting": 0.8059755935106866,
+      "MobileMoneyTransactions": 0.04290897429895772,
+      "RestaurantViolation": 0.9522568829777827,
+      "HatPricingRatings": 0.9988907269908566,
+      "FinancialCredit": 0.5320123342517252,
+      "LandShapeAnomaly": 0.4216390997523004,
+      "GasBenchmark": 0.7575217173355429,
+      "FacilityViolation": 0.36059598864988873,
+      "MedicalClassificationAnomalies": 0.9968131676717003
+    },
+    "Extra Trees": {
+      "LandParcelValidation": 0.7539697469269372,
+      "GeneAnnotationOverlap": 0.32065222300008467,
+      "DeliveryService": 0.623641855538569,
+      "PatientStatusTracking": 0.13033223290796442,
+      "HealthOutcome": 0.7350177642007746,
+      "KidneyTransplants": 0.8310379943956328,
+      "SoilComposition": 1.0,
+      "CodeQualityMetrics": 0.4947208626674283,
+      "ElectrocaloricAnomalies": 1.0,
+      "FinancialPortfolioAnomalies": 0.10136558923526917,
+      "FraudulentSales": 0.5693612782100578,
+      "FootballBetting": 0.7742831321285456,
+      "MobileMoneyTransactions": 0.03321079185127156,
+      "RestaurantViolation": 0.8795475224577581,
+      "HatPricingRatings": 0.9995748090458909,
+      "FinancialCredit": 0.5173701852707897,
+      "LandShapeAnomaly": 0.3884467862496941,
+      "GasBenchmark": 0.7276828449168737,
+      "FacilityViolation": 0.3994116213589433,
+      "MedicalClassificationAnomalies": 0.9974772612361471
+    },
+    "PReNet": {
+      "LandParcelValidation": 0.7311190830066483,
+      "GeneAnnotationOverlap": 0.2978398827722321,
+      "DeliveryService": 0.5818087196911318,
+      "PatientStatusTracking": 0.10572391953927332,
+      "HealthOutcome": 0.6627813927809675,
+      "KidneyTransplants": 0.7479782808278999,
+      "SoilComposition": 1.0,
+      "CodeQualityMetrics": 0.34142024703266716,
+      "ElectrocaloricAnomalies": 1.0,
+      "FinancialPortfolioAnomalies": 0.08550049887819433,
+      "FraudulentSales": 0.5489693170956228,
+      "FootballBetting": 0.7480479864235763,
+      "MobileMoneyTransactions": 0.015511211645301892,
+      "RestaurantViolation": 0.1635971182376561,
+      "HatPricingRatings": 0.9984228851397153,
+      "FinancialCredit": 0.3132480847088114,
+      "LandShapeAnomaly": 0.26674361909469246,
+      "GasBenchmark": 0.7058663929217486,
+      "FacilityViolation": 0.1596864527251176,
+      "MedicalClassificationAnomalies": 0.9874876036883806
+    },
+    "DevNet": {
+      "LandParcelValidation": 0.30254147678166704,
+      "GeneAnnotationOverlap": 0.21785804042641108,
+      "DeliveryService": 0.4640012553287501,
+      "PatientStatusTracking": 0.11844199456095542,
+      "HealthOutcome": 0.7822927023431858,
+      "KidneyTransplants": 0.8166048218716913,
+      "SoilComposition": 1.0,
+      "CodeQualityMetrics": 0.4602423864876227,
+      "ElectrocaloricAnomalies": 1.0,
+      "FinancialPortfolioAnomalies": 0.0726270969942314,
+      "FraudulentSales": 0.5219386401233642,
+      "FootballBetting": 0.7330166157689979,
+      "MobileMoneyTransactions": 0.016274417608214395,
+      "RestaurantViolation": 0.1032650967710865,
+      "HatPricingRatings": 0.9058859066925686,
+      "FinancialCredit": 0.4123730717563424,
+      "LandShapeAnomaly": 0.35401284658334387,
+      "GasBenchmark": 0.6911868398641896,
+      "FacilityViolation": 0.11729718401469758,
+      "MedicalClassificationAnomalies": 0.9888493774366598
+    },
+    "six_expert_validation_selector": {
+      "LandParcelValidation": 0.771959047945959,
+      "GeneAnnotationOverlap": 0.33621166302363426,
+      "DeliveryService": 0.6289505980278383,
+      "PatientStatusTracking": 0.0931453909230149,
+      "HealthOutcome": 0.7739070452035037,
+      "KidneyTransplants": 0.8438532425269762,
+      "SoilComposition": 1.0,
+      "CodeQualityMetrics": 0.5102534933582205,
+      "ElectrocaloricAnomalies": 1.0,
+      "FinancialPortfolioAnomalies": 0.1400650630328221,
+      "FraudulentSales": 0.6157204813647343,
+      "FootballBetting": 0.8028465787714889,
+      "MobileMoneyTransactions": 0.02304799737442383,
+      "RestaurantViolation": 0.9509107822649673,
+      "HatPricingRatings": 0.9997305251916784,
+      "FinancialCredit": 0.5048915430335194,
+      "LandShapeAnomaly": 0.42168220877215257,
+      "GasBenchmark": 0.7520367305165159,
+      "FacilityViolation": 0.4053722328039532,
+      "MedicalClassificationAnomalies": 0.9974772612361471
+    },
+    "expanded_8_expert_validation_selector": {
+      "LandParcelValidation": 0.7693099326277425,
+      "GeneAnnotationOverlap": 0.33621166302363426,
+      "DeliveryService": 0.6272349365031183,
+      "PatientStatusTracking": 0.0931453909230149,
+      "HealthOutcome": 0.7899969935689984,
+      "KidneyTransplants": 0.8438532425269762,
+      "SoilComposition": 1.0,
+      "CodeQualityMetrics": 0.5028866388389547,
+      "ElectrocaloricAnomalies": 1.0,
+      "FinancialPortfolioAnomalies": 0.1400650630328221,
+      "FraudulentSales": 0.6098609818631445,
+      "FootballBetting": 0.8028465787714889,
+      "MobileMoneyTransactions": 0.02288556235321667,
+      "RestaurantViolation": 0.9509107822649673,
+      "HatPricingRatings": 0.9997305251916784,
+      "FinancialCredit": 0.5048915430335194,
+      "LandShapeAnomaly": 0.42168220877215257,
+      "GasBenchmark": 0.7520367305165159,
+      "FacilityViolation": 0.4053722328039532,
+      "MedicalClassificationAnomalies": 0.9974772612361471
+    }
+  },
+  "audit": [
+    {
+      "family": "LandParcelValidation",
+      "seed": 1201,
+      "test_n": 757,
+      "test_anomaly": 12,
+      "six_selector": "RBF-SVM",
+      "expanded_selector": "PReNet"
+    },
+    {
+      "family": "LandParcelValidation",
+      "seed": 1202,
+      "test_n": 757,
+      "test_anomaly": 12,
+      "six_selector": "RRFEN-Hybrid",
+      "expanded_selector": "RRFEN-Hybrid"
+    },
+    {
+      "family": "LandParcelValidation",
+      "seed": 1203,
+      "test_n": 757,
+      "test_anomaly": 12,
+      "six_selector": "HistGradientBoosting",
+      "expanded_selector": "HistGradientBoosting"
+    },
+    {
+      "family": "LandParcelValidation",
+      "seed": 1204,
+      "test_n": 757,
+      "test_anomaly": 12,
+      "six_selector": "Random Forest",
+      "expanded_selector": "Random Forest"
+    },
+    {
+      "family": "LandParcelValidation",
+      "seed": 1205,
+      "test_n": 757,
+      "test_anomaly": 12,
+      "six_selector": "Random Forest",
+      "expanded_selector": "Random Forest"
+    },
+    {
+      "family": "GeneAnnotationOverlap",
+      "seed": 1201,
+      "test_n": 813,
+      "test_anomaly": 63,
+      "six_selector": "Random Forest",
+      "expanded_selector": "Random Forest"
+    },
+    {
+      "family": "GeneAnnotationOverlap",
+      "seed": 1202,
+      "test_n": 813,
+      "test_anomaly": 63,
+      "six_selector": "RBF-SVM",
+      "expanded_selector": "RBF-SVM"
+    },
+    {
+      "family": "GeneAnnotationOverlap",
+      "seed": 1203,
+      "test_n": 813,
+      "test_anomaly": 63,
+      "six_selector": "RRFEN fuzzy-only",
+      "expanded_selector": "RRFEN fuzzy-only"
+    },
+    {
+      "family": "GeneAnnotationOverlap",
+      "seed": 1204,
+      "test_n": 813,
+      "test_anomaly": 63,
+      "six_selector": "RRFEN fuzzy-only",
+      "expanded_selector": "RRFEN fuzzy-only"
+    },
+    {
+      "family": "GeneAnnotationOverlap",
+      "seed": 1205,
+      "test_n": 813,
+      "test_anomaly": 63,
+      "six_selector": "RBF-SVM",
+      "expanded_selector": "RBF-SVM"
+    },
+    {
+      "family": "DeliveryService",
+      "seed": 1201,
+      "test_n": 467,
+      "test_anomaly": 164,
+      "six_selector": "Extra Trees",
+      "expanded_selector": "Extra Trees"
+    },
+    {
+      "family": "DeliveryService",
+      "seed": 1202,
+      "test_n": 467,
+      "test_anomaly": 164,
+      "six_selector": "RBF-SVM",
+      "expanded_selector": "RBF-SVM"
+    },
+    {
+      "family": "DeliveryService",
+      "seed": 1203,
+      "test_n": 467,
+      "test_anomaly": 164,
+      "six_selector": "Extra Trees",
+      "expanded_selector": "Extra Trees"
+    },
+    {
+      "family": "DeliveryService",
+      "seed": 1204,
+      "test_n": 467,
+      "test_anomaly": 164,
+      "six_selector": "Extra Trees",
+      "expanded_selector": "PReNet"
+    },
+    {
+      "family": "DeliveryService",
+      "seed": 1205,
+      "test_n": 467,
+      "test_anomaly": 164,
+      "six_selector": "Extra Trees",
+      "expanded_selector": "Extra Trees"
+    },
+    {
+      "family": "PatientStatusTracking",
+      "seed": 1201,
+      "test_n": 858,
+      "test_anomaly": 11,
+      "six_selector": "RBF-SVM",
+      "expanded_selector": "RBF-SVM"
+    },
+    {
+      "family": "PatientStatusTracking",
+      "seed": 1202,
+      "test_n": 858,
+      "test_anomaly": 11,
+      "six_selector": "RBF-SVM",
+      "expanded_selector": "RBF-SVM"
+    },
+    {
+      "family": "PatientStatusTracking",
+      "seed": 1203,
+      "test_n": 858,
+      "test_anomaly": 10,
+      "six_selector": "RRFEN fuzzy-only",
+      "expanded_selector": "RRFEN fuzzy-only"
+    },
+    {
+      "family": "PatientStatusTracking",
+      "seed": 1204,
+      "test_n": 858,
+      "test_anomaly": 10,
+      "six_selector": "Extra Trees",
+      "expanded_selector": "Extra Trees"
+    },
+    {
+      "family": "PatientStatusTracking",
+      "seed": 1205,
+      "test_n": 858,
+      "test_anomaly": 10,
+      "six_selector": "Extra Trees",
+      "expanded_selector": "Extra Trees"
+    },
+    {
+      "family": "HealthOutcome",
+      "seed": 1201,
+      "test_n": 572,
+      "test_anomaly": 115,
+      "six_selector": "RBF-SVM",
+      "expanded_selector": "DevNet"
+    },
+    {
+      "family": "HealthOutcome",
+      "seed": 1202,
+      "test_n": 572,
+      "test_anomaly": 115,
+      "six_selector": "RBF-SVM",
+      "expanded_selector": "RBF-SVM"
+    },
+    {
+      "family": "HealthOutcome",
+      "seed": 1203,
+      "test_n": 572,
+      "test_anomaly": 115,
+      "six_selector": "RBF-SVM",
+      "expanded_selector": "DevNet"
+    },
+    {
+      "family": "HealthOutcome",
+      "seed": 1204,
+      "test_n": 572,
+      "test_anomaly": 115,
+      "six_selector": "RBF-SVM",
+      "expanded_selector": "RBF-SVM"
+    },
+    {
+      "family": "HealthOutcome",
+      "seed": 1205,
+      "test_n": 572,
+      "test_anomaly": 115,
+      "six_selector": "RBF-SVM",
+      "expanded_selector": "DevNet"
+    },
+    {
+      "family": "KidneyTransplants",
+      "seed": 1201,
+      "test_n": 386,
+      "test_anomaly": 114,
+      "six_selector": "Extra Trees",
+      "expanded_selector": "Extra Trees"
+    },
+    {
+      "family": "KidneyTransplants",
+      "seed": 1202,
+      "test_n": 386,
+      "test_anomaly": 114,
+      "six_selector": "Extra Trees",
+      "expanded_selector": "Extra Trees"
+    },
+    {
+      "family": "KidneyTransplants",
+      "seed": 1203,
+      "test_n": 386,
+      "test_anomaly": 114,
+      "six_selector": "RBF-SVM",
+      "expanded_selector": "RBF-SVM"
+    },
+    {
+      "family": "KidneyTransplants",
+      "seed": 1204,
+      "test_n": 386,
+      "test_anomaly": 114,
+      "six_selector": "Extra Trees",
+      "expanded_selector": "Extra Trees"
+    },
+    {
+      "family": "KidneyTransplants",
+      "seed": 1205,
+      "test_n": 386,
+      "test_anomaly": 114,
+      "six_selector": "Random Forest",
+      "expanded_selector": "Random Forest"
+    },
+    {
+      "family": "SoilComposition",
+      "seed": 1201,
+      "test_n": 883,
+      "test_anomaly": 25,
+      "six_selector": "RBF-SVM",
+      "expanded_selector": "RBF-SVM"
+    },
+    {
+      "family": "SoilComposition",
+      "seed": 1202,
+      "test_n": 883,
+      "test_anomaly": 25,
+      "six_selector": "RRFEN-Hybrid",
+      "expanded_selector": "RRFEN-Hybrid"
+    },
+    {
+      "family": "SoilComposition",
+      "seed": 1203,
+      "test_n": 883,
+      "test_anomaly": 25,
+      "six_selector": "RBF-SVM",
+      "expanded_selector": "Random Forest"
+    },
+    {
+      "family": "SoilComposition",
+      "seed": 1204,
+      "test_n": 883,
+      "test_anomaly": 25,
+      "six_selector": "RBF-SVM",
+      "expanded_selector": "Random Forest"
+    },
+    {
+      "family": "SoilComposition",
+      "seed": 1205,
+      "test_n": 883,
+      "test_anomaly": 25,
+      "six_selector": "RBF-SVM",
+      "expanded_selector": "RBF-SVM"
+    },
+    {
+      "family": "CodeQualityMetrics",
+      "seed": 1201,
+      "test_n": 500,
+      "test_anomaly": 111,
+      "six_selector": "Extra Trees",
+      "expanded_selector": "Extra Trees"
+    },
+    {
+      "family": "CodeQualityMetrics",
+      "seed": 1202,
+      "test_n": 500,
+      "test_anomaly": 111,
+      "six_selector": "RRFEN fuzzy-only",
+      "expanded_selector": "DevNet"
+    },
+    {
+      "family": "CodeQualityMetrics",
+      "seed": 1203,
+      "test_n": 500,
+      "test_anomaly": 111,
+      "six_selector": "RBF-SVM",
+      "expanded_selector": "RBF-SVM"
+    },
+    {
+      "family": "CodeQualityMetrics",
+      "seed": 1204,
+      "test_n": 500,
+      "test_anomaly": 111,
+      "six_selector": "Extra Trees",
+      "expanded_selector": "Extra Trees"
+    },
+    {
+      "family": "CodeQualityMetrics",
+      "seed": 1205,
+      "test_n": 500,
+      "test_anomaly": 111,
+      "six_selector": "Extra Trees",
+      "expanded_selector": "Extra Trees"
+    },
+    {
+      "family": "ElectrocaloricAnomalies",
+      "seed": 1201,
+      "test_n": 315,
+      "test_anomaly": 122,
+      "six_selector": "Random Forest",
+      "expanded_selector": "Random Forest"
+    },
+    {
+      "family": "ElectrocaloricAnomalies",
+      "seed": 1202,
+      "test_n": 315,
+      "test_anomaly": 122,
+      "six_selector": "Random Forest",
+      "expanded_selector": "Random Forest"
+    },
+    {
+      "family": "ElectrocaloricAnomalies",
+      "seed": 1203,
+      "test_n": 315,
+      "test_anomaly": 121,
+      "six_selector": "RBF-SVM",
+      "expanded_selector": "Random Forest"
+    },
+    {
+      "family": "ElectrocaloricAnomalies",
+      "seed": 1204,
+      "test_n": 315,
+      "test_anomaly": 121,
+      "six_selector": "RBF-SVM",
+      "expanded_selector": "Random Forest"
+    },
+    {
+      "family": "ElectrocaloricAnomalies",
+      "seed": 1205,
+      "test_n": 315,
+      "test_anomaly": 121,
+      "six_selector": "Random Forest",
+      "expanded_selector": "Random Forest"
+    },
+    {
+      "family": "FinancialPortfolioAnomalies",
+      "seed": 1201,
+      "test_n": 2742,
+      "test_anomaly": 25,
+      "six_selector": "RBF-SVM",
+      "expanded_selector": "RBF-SVM"
+    },
+    {
+      "family": "FinancialPortfolioAnomalies",
+      "seed": 1202,
+      "test_n": 2742,
+      "test_anomaly": 25,
+      "six_selector": "RBF-SVM",
+      "expanded_selector": "RBF-SVM"
+    },
+    {
+      "family": "FinancialPortfolioAnomalies",
+      "seed": 1203,
+      "test_n": 2742,
+      "test_anomaly": 25,
+      "six_selector": "RRFEN fuzzy-only",
+      "expanded_selector": "RRFEN fuzzy-only"
+    },
+    {
+      "family": "FinancialPortfolioAnomalies",
+      "seed": 1204,
+      "test_n": 2742,
+      "test_anomaly": 25,
+      "six_selector": "RBF-SVM",
+      "expanded_selector": "RBF-SVM"
+    },
+    {
+      "family": "FinancialPortfolioAnomalies",
+      "seed": 1205,
+      "test_n": 2742,
+      "test_anomaly": 25,
+      "six_selector": "RBF-SVM",
+      "expanded_selector": "RBF-SVM"
+    },
+    {
+      "family": "FraudulentSales",
+      "seed": 1201,
+      "test_n": 2972,
+      "test_anomaly": 617,
+      "six_selector": "Extra Trees",
+      "expanded_selector": "PReNet"
+    },
+    {
+      "family": "FraudulentSales",
+      "seed": 1202,
+      "test_n": 2972,
+      "test_anomaly": 617,
+      "six_selector": "Random Forest",
+      "expanded_selector": "Random Forest"
+    },
+    {
+      "family": "FraudulentSales",
+      "seed": 1203,
+      "test_n": 2972,
+      "test_anomaly": 616,
+      "six_selector": "Random Forest",
+      "expanded_selector": "Random Forest"
+    },
+    {
+      "family": "FraudulentSales",
+      "seed": 1204,
+      "test_n": 2972,
+      "test_anomaly": 616,
+      "six_selector": "Random Forest",
+      "expanded_selector": "Random Forest"
+    },
+    {
+      "family": "FraudulentSales",
+      "seed": 1205,
+      "test_n": 2972,
+      "test_anomaly": 616,
+      "six_selector": "Random Forest",
+      "expanded_selector": "Random Forest"
+    },
+    {
+      "family": "FootballBetting",
+      "seed": 1201,
+      "test_n": 2376,
+      "test_anomaly": 1053,
+      "six_selector": "RBF-SVM",
+      "expanded_selector": "RBF-SVM"
+    },
+    {
+      "family": "FootballBetting",
+      "seed": 1202,
+      "test_n": 2376,
+      "test_anomaly": 1053,
+      "six_selector": "RBF-SVM",
+      "expanded_selector": "RBF-SVM"
+    },
+    {
+      "family": "FootballBetting",
+      "seed": 1203,
+      "test_n": 2376,
+      "test_anomaly": 1052,
+      "six_selector": "RBF-SVM",
+      "expanded_selector": "RBF-SVM"
+    },
+    {
+      "family": "FootballBetting",
+      "seed": 1204,
+      "test_n": 2376,
+      "test_anomaly": 1052,
+      "six_selector": "Extra Trees",
+      "expanded_selector": "Extra Trees"
+    },
+    {
+      "family": "FootballBetting",
+      "seed": 1205,
+      "test_n": 2376,
+      "test_anomaly": 1052,
+      "six_selector": "RBF-SVM",
+      "expanded_selector": "RBF-SVM"
+    },
+    {
+      "family": "MobileMoneyTransactions",
+      "seed": 1201,
+      "test_n": 3769,
+      "test_anomaly": 41,
+      "six_selector": "RRFEN fuzzy-only",
+      "expanded_selector": "DevNet"
+    },
+    {
+      "family": "MobileMoneyTransactions",
+      "seed": 1202,
+      "test_n": 3769,
+      "test_anomaly": 41,
+      "six_selector": "Extra Trees",
+      "expanded_selector": "Extra Trees"
+    },
+    {
+      "family": "MobileMoneyTransactions",
+      "seed": 1203,
+      "test_n": 3769,
+      "test_anomaly": 40,
+      "six_selector": "RRFEN fuzzy-only",
+      "expanded_selector": "RRFEN fuzzy-only"
+    },
+    {
+      "family": "MobileMoneyTransactions",
+      "seed": 1204,
+      "test_n": 3769,
+      "test_anomaly": 40,
+      "six_selector": "RBF-SVM",
+      "expanded_selector": "RBF-SVM"
+    },
+    {
+      "family": "MobileMoneyTransactions",
+      "seed": 1205,
+      "test_n": 3769,
+      "test_anomaly": 40,
+      "six_selector": "Extra Trees",
+      "expanded_selector": "Extra Trees"
+    },
+    {
+      "family": "RestaurantViolation",
+      "seed": 1201,
+      "test_n": 3366,
+      "test_anomaly": 357,
+      "six_selector": "Random Forest",
+      "expanded_selector": "Random Forest"
+    },
+    {
+      "family": "RestaurantViolation",
+      "seed": 1202,
+      "test_n": 3366,
+      "test_anomaly": 357,
+      "six_selector": "Random Forest",
+      "expanded_selector": "Random Forest"
+    },
+    {
+      "family": "RestaurantViolation",
+      "seed": 1203,
+      "test_n": 3366,
+      "test_anomaly": 357,
+      "six_selector": "Random Forest",
+      "expanded_selector": "Random Forest"
+    },
+    {
+      "family": "RestaurantViolation",
+      "seed": 1204,
+      "test_n": 3366,
+      "test_anomaly": 357,
+      "six_selector": "Random Forest",
+      "expanded_selector": "Random Forest"
+    },
+    {
+      "family": "RestaurantViolation",
+      "seed": 1205,
+      "test_n": 3366,
+      "test_anomaly": 357,
+      "six_selector": "Random Forest",
+      "expanded_selector": "Random Forest"
+    },
+    {
+      "family": "HatPricingRatings",
+      "seed": 1201,
+      "test_n": 1225,
+      "test_anomaly": 352,
+      "six_selector": "RBF-SVM",
+      "expanded_selector": "RBF-SVM"
+    },
+    {
+      "family": "HatPricingRatings",
+      "seed": 1202,
+      "test_n": 1225,
+      "test_anomaly": 352,
+      "six_selector": "RBF-SVM",
+      "expanded_selector": "RBF-SVM"
+    },
+    {
+      "family": "HatPricingRatings",
+      "seed": 1203,
+      "test_n": 1225,
+      "test_anomaly": 352,
+      "six_selector": "RBF-SVM",
+      "expanded_selector": "RBF-SVM"
+    },
+    {
+      "family": "HatPricingRatings",
+      "seed": 1204,
+      "test_n": 1225,
+      "test_anomaly": 352,
+      "six_selector": "RBF-SVM",
+      "expanded_selector": "RBF-SVM"
+    },
+    {
+      "family": "HatPricingRatings",
+      "seed": 1205,
+      "test_n": 1225,
+      "test_anomaly": 352,
+      "six_selector": "Extra Trees",
+      "expanded_selector": "Extra Trees"
+    },
+    {
+      "family": "FinancialCredit",
+      "seed": 1201,
+      "test_n": 2072,
+      "test_anomaly": 37,
+      "six_selector": "Random Forest",
+      "expanded_selector": "Random Forest"
+    },
+    {
+      "family": "FinancialCredit",
+      "seed": 1202,
+      "test_n": 2072,
+      "test_anomaly": 37,
+      "six_selector": "Random Forest",
+      "expanded_selector": "Random Forest"
+    },
+    {
+      "family": "FinancialCredit",
+      "seed": 1203,
+      "test_n": 2072,
+      "test_anomaly": 37,
+      "six_selector": "Extra Trees",
+      "expanded_selector": "Extra Trees"
+    },
+    {
+      "family": "FinancialCredit",
+      "seed": 1204,
+      "test_n": 2072,
+      "test_anomaly": 37,
+      "six_selector": "Random Forest",
+      "expanded_selector": "Random Forest"
+    },
+    {
+      "family": "FinancialCredit",
+      "seed": 1205,
+      "test_n": 2072,
+      "test_anomaly": 37,
+      "six_selector": "Random Forest",
+      "expanded_selector": "Random Forest"
+    },
+    {
+      "family": "LandShapeAnomaly",
+      "seed": 1201,
+      "test_n": 1125,
+      "test_anomaly": 240,
+      "six_selector": "RRFEN-Hybrid",
+      "expanded_selector": "RRFEN-Hybrid"
+    },
+    {
+      "family": "LandShapeAnomaly",
+      "seed": 1202,
+      "test_n": 1125,
+      "test_anomaly": 240,
+      "six_selector": "RRFEN-Hybrid",
+      "expanded_selector": "RRFEN-Hybrid"
+    },
+    {
+      "family": "LandShapeAnomaly",
+      "seed": 1203,
+      "test_n": 1125,
+      "test_anomaly": 240,
+      "six_selector": "RBF-SVM",
+      "expanded_selector": "RBF-SVM"
+    },
+    {
+      "family": "LandShapeAnomaly",
+      "seed": 1204,
+      "test_n": 1125,
+      "test_anomaly": 240,
+      "six_selector": "RRFEN fuzzy-only",
+      "expanded_selector": "RRFEN fuzzy-only"
+    },
+    {
+      "family": "LandShapeAnomaly",
+      "seed": 1205,
+      "test_n": 1125,
+      "test_anomaly": 240,
+      "six_selector": "RRFEN-Hybrid",
+      "expanded_selector": "RRFEN-Hybrid"
+    },
+    {
+      "family": "GasBenchmark",
+      "seed": 1201,
+      "test_n": 1895,
+      "test_anomaly": 795,
+      "six_selector": "RBF-SVM",
+      "expanded_selector": "RBF-SVM"
+    },
+    {
+      "family": "GasBenchmark",
+      "seed": 1202,
+      "test_n": 1895,
+      "test_anomaly": 795,
+      "six_selector": "Extra Trees",
+      "expanded_selector": "Extra Trees"
+    },
+    {
+      "family": "GasBenchmark",
+      "seed": 1203,
+      "test_n": 1895,
+      "test_anomaly": 794,
+      "six_selector": "Extra Trees",
+      "expanded_selector": "Extra Trees"
+    },
+    {
+      "family": "GasBenchmark",
+      "seed": 1204,
+      "test_n": 1895,
+      "test_anomaly": 794,
+      "six_selector": "RBF-SVM",
+      "expanded_selector": "RBF-SVM"
+    },
+    {
+      "family": "GasBenchmark",
+      "seed": 1205,
+      "test_n": 1895,
+      "test_anomaly": 794,
+      "six_selector": "Extra Trees",
+      "expanded_selector": "Extra Trees"
+    },
+    {
+      "family": "FacilityViolation",
+      "seed": 1201,
+      "test_n": 11536,
+      "test_anomaly": 84,
+      "six_selector": "RRFEN-Hybrid",
+      "expanded_selector": "RRFEN-Hybrid"
+    },
+    {
+      "family": "FacilityViolation",
+      "seed": 1202,
+      "test_n": 11536,
+      "test_anomaly": 84,
+      "six_selector": "Extra Trees",
+      "expanded_selector": "Extra Trees"
+    },
+    {
+      "family": "FacilityViolation",
+      "seed": 1203,
+      "test_n": 11536,
+      "test_anomaly": 83,
+      "six_selector": "Extra Trees",
+      "expanded_selector": "Extra Trees"
+    },
+    {
+      "family": "FacilityViolation",
+      "seed": 1204,
+      "test_n": 11536,
+      "test_anomaly": 83,
+      "six_selector": "RRFEN-Hybrid",
+      "expanded_selector": "RRFEN-Hybrid"
+    },
+    {
+      "family": "FacilityViolation",
+      "seed": 1205,
+      "test_n": 11536,
+      "test_anomaly": 83,
+      "six_selector": "Extra Trees",
+      "expanded_selector": "Extra Trees"
+    },
+    {
+      "family": "MedicalClassificationAnomalies",
+      "seed": 1201,
+      "test_n": 8287,
+      "test_anomaly": 1027,
+      "six_selector": "Extra Trees",
+      "expanded_selector": "Extra Trees"
+    },
+    {
+      "family": "MedicalClassificationAnomalies",
+      "seed": 1202,
+      "test_n": 8287,
+      "test_anomaly": 1027,
+      "six_selector": "Extra Trees",
+      "expanded_selector": "Extra Trees"
+    },
+    {
+      "family": "MedicalClassificationAnomalies",
+      "seed": 1203,
+      "test_n": 8287,
+      "test_anomaly": 1027,
+      "six_selector": "Extra Trees",
+      "expanded_selector": "Extra Trees"
+    },
+    {
+      "family": "MedicalClassificationAnomalies",
+      "seed": 1204,
+      "test_n": 8287,
+      "test_anomaly": 1027,
+      "six_selector": "Extra Trees",
+      "expanded_selector": "Extra Trees"
+    },
+    {
+      "family": "MedicalClassificationAnomalies",
+      "seed": 1205,
+      "test_n": 8287,
+      "test_anomaly": 1027,
+      "six_selector": "Extra Trees",
+      "expanded_selector": "Extra Trees"
+    }
+  ],
+  "interpretation": "All six listed contrasts were specified before scoring this cohort and Holm-corrected together. Positive results are evidence only for this frozen protocol and these families."
+}

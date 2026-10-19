@@ -1,0 +1,423 @@
+{
+  "status": "predictions_frozen_test_metrics_not_computed",
+  "dataset": "MobileMoneyTransactions",
+  "seed": 1203,
+  "protocol_sha256": "c002b0b64f83a52fff24491db8b4d1cb64b316faa64bc88b5c08fbed58301484",
+  "metadata_manifest_sha256": "e92e6c1b1f11b32297dc772b5cfa3e10d9c97712c05b815f520f251c65e6c3ed",
+  "script_sha256": "37279ff5fc1a81a8027a28122120879b1857b57f42b4c997fde49020e88d644f",
+  "source_sha256": "3b2dadb62b45ad43c73f0d8c910817ca4bd08b9ceb7bd94b7633cfd295d6b449",
+  "counts": {
+    "n_train_rows_raw": 7457,
+    "n_train_unique_groups": 7457,
+    "n_test_rows_raw": 7548,
+    "n_test_conflict_groups_removed": 0,
+    "n_test_train_overlap_groups_removed": 0,
+    "n_test_unique_groups_after_filter": 7548,
+    "d": 7,
+    "support_pos": 10,
+    "calibration_normal": 50,
+    "validation_n": 3769,
+    "validation_pos": 41,
+    "test_n": 3769,
+    "test_pos": 40,
+    "test_predictions_group_unique": true
+  },
+  "validation_records": {
+    "RBF-SVM": {
+      "params": {
+        "C": 0.1,
+        "gamma": 0.14285714285714285
+      },
+      "validation_AP": 0.021678038666208092,
+      "trials": [
+        {
+          "params": {
+            "C": 0.1,
+            "gamma": 0.014285714285714287
+          },
+          "validation_AP": 0.011800496098712695
+        },
+        {
+          "params": {
+            "C": 0.1,
+            "gamma": 0.14285714285714285
+          },
+          "validation_AP": 0.021678038666208092
+        },
+        {
+          "params": {
+            "C": 0.1,
+            "gamma": 1.4285714285714286
+          },
+          "validation_AP": 0.01865060689696201
+        },
+        {
+          "params": {
+            "C": 1.0,
+            "gamma": 0.014285714285714287
+          },
+          "validation_AP": 0.011783253131014321
+        },
+        {
+          "params": {
+            "C": 1.0,
+            "gamma": 0.14285714285714285
+          },
+          "validation_AP": 0.01976798222291122
+        },
+        {
+          "params": {
+            "C": 1.0,
+            "gamma": 1.4285714285714286
+          },
+          "validation_AP": 0.01951220927146219
+        },
+        {
+          "params": {
+            "C": 10.0,
+            "gamma": 0.014285714285714287
+          },
+          "validation_AP": 0.013186362083934363
+        },
+        {
+          "params": {
+            "C": 10.0,
+            "gamma": 0.14285714285714285
+          },
+          "validation_AP": 0.018660441020613105
+        },
+        {
+          "params": {
+            "C": 10.0,
+            "gamma": 1.4285714285714286
+          },
+          "validation_AP": 0.019623829755708182
+        }
+      ],
+      "fit_seconds": 0.35128240000631195,
+      "inference_seconds": 0.034573999990243465
+    },
+    "Random Forest": {
+      "params": {
+        "min_samples_leaf": 1,
+        "max_features": 1.0
+      },
+      "validation_AP": 0.03222173814560893,
+      "trials": [
+        {
+          "params": {
+            "min_samples_leaf": 1,
+            "max_features": 0.5
+          },
+          "validation_AP": 0.027473602122350275
+        },
+        {
+          "params": {
+            "min_samples_leaf": 1,
+            "max_features": 0.75
+          },
+          "validation_AP": 0.030486564384087183
+        },
+        {
+          "params": {
+            "min_samples_leaf": 1,
+            "max_features": 1.0
+          },
+          "validation_AP": 0.03222173814560893
+        },
+        {
+          "params": {
+            "min_samples_leaf": 5,
+            "max_features": 0.5
+          },
+          "validation_AP": 0.026205661476115832
+        },
+        {
+          "params": {
+            "min_samples_leaf": 5,
+            "max_features": 0.75
+          },
+          "validation_AP": 0.03033764638704442
+        },
+        {
+          "params": {
+            "min_samples_leaf": 5,
+            "max_features": 1.0
+          },
+          "validation_AP": 0.03216947260179567
+        },
+        {
+          "params": {
+            "min_samples_leaf": 20,
+            "max_features": 0.5
+          },
+          "validation_AP": 0.010878217033695941
+        },
+        {
+          "params": {
+            "min_samples_leaf": 20,
+            "max_features": 0.75
+          },
+          "validation_AP": 0.010878217033695941
+        },
+        {
+          "params": {
+            "min_samples_leaf": 20,
+            "max_features": 1.0
+          },
+          "validation_AP": 0.010878217033695941
+        }
+      ],
+      "fit_seconds": 5.3780349000007845,
+      "inference_seconds": 0.07843090000096709
+    },
+    "Extra Trees": {
+      "params": {
+        "min_samples_leaf": 3,
+        "max_features": 0.5
+      },
+      "validation_AP": 0.034825449506111335,
+      "trials": [
+        {
+          "params": {
+            "min_samples_leaf": 1,
+            "max_features": 0.5
+          },
+          "validation_AP": 0.030291480006890373
+        },
+        {
+          "params": {
+            "min_samples_leaf": 1,
+            "max_features": 1.0
+          },
+          "validation_AP": 0.03020880896823215
+        },
+        {
+          "params": {
+            "min_samples_leaf": 3,
+            "max_features": 0.5
+          },
+          "validation_AP": 0.034825449506111335
+        },
+        {
+          "params": {
+            "min_samples_leaf": 3,
+            "max_features": 1.0
+          },
+          "validation_AP": 0.03240527053533839
+        },
+        {
+          "params": {
+            "min_samples_leaf": 10,
+            "max_features": 0.5
+          },
+          "validation_AP": 0.030827822117576575
+        },
+        {
+          "params": {
+            "min_samples_leaf": 10,
+            "max_features": 1.0
+          },
+          "validation_AP": 0.029979508179614225
+        }
+      ],
+      "fit_seconds": 4.339090800000122,
+      "inference_seconds": 0.11181860000942834
+    },
+    "HistGradientBoosting": {
+      "params": {
+        "max_leaf_nodes": 7,
+        "l2_regularization": 0.1
+      },
+      "validation_AP": 0.025762596252255535,
+      "trials": [
+        {
+          "params": {
+            "max_leaf_nodes": 7,
+            "l2_regularization": 0.1
+          },
+          "validation_AP": 0.025762596252255535
+        },
+        {
+          "params": {
+            "max_leaf_nodes": 7,
+            "l2_regularization": 1.0
+          },
+          "validation_AP": 0.025621709785416787
+        },
+        {
+          "params": {
+            "max_leaf_nodes": 7,
+            "l2_regularization": 10.0
+          },
+          "validation_AP": 0.02500913257133905
+        },
+        {
+          "params": {
+            "max_leaf_nodes": 15,
+            "l2_regularization": 0.1
+          },
+          "validation_AP": 0.025762596252255535
+        },
+        {
+          "params": {
+            "max_leaf_nodes": 15,
+            "l2_regularization": 1.0
+          },
+          "validation_AP": 0.025621709785416787
+        },
+        {
+          "params": {
+            "max_leaf_nodes": 15,
+            "l2_regularization": 10.0
+          },
+          "validation_AP": 0.02500913257133905
+        },
+        {
+          "params": {
+            "max_leaf_nodes": 31,
+            "l2_regularization": 0.1
+          },
+          "validation_AP": 0.025762596252255535
+        },
+        {
+          "params": {
+            "max_leaf_nodes": 31,
+            "l2_regularization": 1.0
+          },
+          "validation_AP": 0.025621709785416787
+        },
+        {
+          "params": {
+            "max_leaf_nodes": 31,
+            "l2_regularization": 10.0
+          },
+          "validation_AP": 0.02500913257133905
+        }
+      ],
+      "fit_seconds": 0.9798640999943018,
+      "inference_seconds": 0.023239400004968047
+    },
+    "RRFEN fuzzy-only": {
+      "params": {
+        "prototype": 16,
+        "local_k": 25
+      },
+      "validation_AP": 0.04420915139777816,
+      "trials": [
+        {
+          "proto": 8,
+          "local_k": 5,
+          "validation_AP": 0.03993172503828875
+        },
+        {
+          "proto": 8,
+          "local_k": 15,
+          "validation_AP": 0.03989312851024337
+        },
+        {
+          "proto": 8,
+          "local_k": 25,
+          "validation_AP": 0.0398738000448283
+        },
+        {
+          "proto": 16,
+          "local_k": 5,
+          "validation_AP": 0.03282015878298949
+        },
+        {
+          "proto": 16,
+          "local_k": 15,
+          "validation_AP": 0.032012980935599664
+        },
+        {
+          "proto": 16,
+          "local_k": 25,
+          "validation_AP": 0.04420915139777816
+        },
+        {
+          "proto": 32,
+          "local_k": 5,
+          "validation_AP": 0.029798909502375504
+        },
+        {
+          "proto": 32,
+          "local_k": 15,
+          "validation_AP": 0.04178633754971674
+        },
+        {
+          "proto": 32,
+          "local_k": 25,
+          "validation_AP": 0.04155853602314303
+        }
+      ],
+      "fit_seconds": 0.8187089999992168,
+      "inference_seconds": 0.029680600011488423
+    },
+    "RRFEN-Hybrid": {
+      "params": {
+        "prototype": 16,
+        "local_k": 25,
+        "gate_C": 0.1,
+        "RBF_SVM": {
+          "C": 0.1,
+          "gamma": 0.14285714285714285
+        },
+        "Random_Forest": {
+          "min_samples_leaf": 1,
+          "max_features": 1.0
+        }
+      },
+      "validation_AP": 0.024193192004735686,
+      "fit_seconds": 6.451536399996257,
+      "inference_seconds": 0.3301160999981221
+    }
+  },
+  "bootstrap_selector": {
+    "RBF-SVM": {
+      "mean_AP": 0.025624012164320042,
+      "sd_AP": 0.010732440978362453,
+      "utility": 0.004159130207595136
+    },
+    "Random Forest": {
+      "mean_AP": 0.03508982223004632,
+      "sd_AP": 0.007773037952711152,
+      "utility": 0.019543746324624016
+    },
+    "Extra Trees": {
+      "mean_AP": 0.03810870883615552,
+      "sd_AP": 0.009373239599496586,
+      "utility": 0.019362229637162345
+    },
+    "HistGradientBoosting": {
+      "mean_AP": 0.028364599704177478,
+      "sd_AP": 0.006818174478243182,
+      "utility": 0.014728250747691114
+    },
+    "RRFEN fuzzy-only": {
+      "mean_AP": 0.044846564180831154,
+      "sd_AP": 0.024969160397444623,
+      "utility": -0.005091756614058092
+    },
+    "RRFEN-Hybrid": {
+      "mean_AP": 0.02705727398396252,
+      "sd_AP": 0.006553796622037086,
+      "utility": 0.013949680739888348
+    },
+    "rank_fusion_weights": {
+      "RBF-SVM": 0.14288966628582872,
+      "Random Forest": 0.19437029762476365,
+      "Extra Trees": 0.1936659478593811,
+      "HistGradientBoosting": 0.17652370597333492,
+      "RRFEN fuzzy-only": 0.11875410747539551,
+      "RRFEN-Hybrid": 0.17379627478129603
+    },
+    "rank_fusion_fixed_alpha": 2.0,
+    "rank_fusion_fixed_temperature": 0.05
+  },
+  "selected_expert": "Random Forest",
+  "validation_ap_max_expert": "RRFEN fuzzy-only",
+  "test_prediction_sha256": "2e05d6e5a25efadc70e703c7dfd228daa125c4b36e298df34f5305e96619ef64",
+  "prediction_file": "groupclean_replication5_predictions\\MobileMoneyTransactions\\1203\\frozen_predictions.npz",
+  "cpu_only": true
+}

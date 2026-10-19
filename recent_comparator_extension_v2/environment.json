@@ -1,0 +1,10 @@
+{
+  "protocol_sha256": "7658af0889a3a43687f241636ea62b6e84eac2d7fbf570ae9c6832c91fcedf13",
+  "runner_sha256": "342f26440c4481a2dfe0d4ecfb69928e4c96d38051e3ab31d63f2aeb60c7977f",
+  "wsad_dt_source_commit": "b59c4aa4595fd24462e9c6852c1fc792a0dc7d0d",
+  "faircomb_source_commit": "1309b7780e61c96998246135348bbfdfb2939b01",
+  "torch_version": "2.14.1+cpu",
+  "cuda_available": false,
+  "torch_threads": 2,
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]"
+}

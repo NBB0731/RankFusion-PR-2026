@@ -1,0 +1,59 @@
+{
+  "status": "complete",
+  "dataset": "KidneyTransplants",
+  "seed": 1205,
+  "protocol_sha256": "7658af0889a3a43687f241636ea62b6e84eac2d7fbf570ae9c6832c91fcedf13",
+  "official_source_commits": {
+    "WSAD-DT": "b59c4aa4595fd24462e9c6852c1fc792a0dc7d0d",
+    "FairComb": "1309b7780e61c96998246135348bbfdfb2939b01"
+  },
+  "metrics": {
+    "candidate_validation_AP": 0.8651914744888622,
+    "candidate_test_AP": 0.8480533047758474,
+    "FairComb_test_AP": 0.8350492874251607,
+    "WSAD_DT_validation_AP": 0.8486771717968958,
+    "WSAD_DT_test_AP": 0.8533010721696885
+  },
+  "faircomb": {
+    "selected_experts": [
+      "Random Forest",
+      "HistGradientBoosting",
+      "RRFEN fuzzy-only"
+    ],
+    "selected_indices": [
+      1,
+      3,
+      4
+    ],
+    "validation_top_k": 113,
+    "score_parity": 0.1019465752852815,
+    "ep_before": 0.21062179847498919,
+    "ep_after": 0.21429831292873813,
+    "correction_applied": false,
+    "fallback_fixed_topk": null,
+    "variant": "Z-Norm mean",
+    "ep_combination_rule": "max over selected expert scores",
+    "final_combination": "mean",
+    "gselect_z_norm_validation_AP": 0.8525816727268661
+  },
+  "wsad_dt": {
+    "official_defaults": {
+      "n_ensemble": 5,
+      "batch_size": 64,
+      "epochs": 100,
+      "seed": 1205
+    },
+    "fit_and_score_seconds": 40.12644320001709,
+    "train_rows": 495
+  },
+  "counts": {
+    "unlabeled_reference": 435,
+    "known_normal_support": 50,
+    "known_anomaly_support": 10,
+    "validation": 385,
+    "test": 386
+  },
+  "test_labels_used_in_model_or_fusion_selection": false,
+  "prediction_sha256": "ed0006a84f3da17dd942ae9f436c42290e88c9b7d550e2d37e52ed32279482ff",
+  "runner_sha256": "9925c5e25ed334f35172a8caa52f53afd1a8a9c430ff7c203f75f8035d8e139c"
+}

@@ -1,0 +1,61 @@
+{
+  "status": "complete",
+  "dataset": "GeneAnnotationOverlap",
+  "seed": 1205,
+  "protocol_sha256": "7658af0889a3a43687f241636ea62b6e84eac2d7fbf570ae9c6832c91fcedf13",
+  "official_source_commits": {
+    "WSAD-DT": "b59c4aa4595fd24462e9c6852c1fc792a0dc7d0d",
+    "FairComb": "1309b7780e61c96998246135348bbfdfb2939b01"
+  },
+  "metrics": {
+    "candidate_validation_AP": 0.2879822316349563,
+    "candidate_test_AP": 0.3845185973135181,
+    "FairComb_test_AP": 0.29087507154818215,
+    "WSAD_DT_validation_AP": 0.2607342857910758,
+    "WSAD_DT_test_AP": 0.30650876597693416
+  },
+  "faircomb": {
+    "selected_experts": [
+      "RRFEN-Hybrid",
+      "Extra Trees",
+      "HistGradientBoosting",
+      "RRFEN fuzzy-only"
+    ],
+    "selected_indices": [
+      5,
+      2,
+      3,
+      4
+    ],
+    "validation_top_k": 63,
+    "score_parity": 0.08515929800480126,
+    "ep_before": 0.05296768157452347,
+    "ep_after": 0.03268061212542972,
+    "correction_applied": true,
+    "fallback_fixed_topk": null,
+    "variant": "WtSR",
+    "ep_combination_rule": "max over selected expert scores",
+    "final_combination": "mean",
+    "gselect_z_norm_validation_AP": 0.2611519686668527
+  },
+  "wsad_dt": {
+    "official_defaults": {
+      "n_ensemble": 5,
+      "batch_size": 64,
+      "epochs": 100,
+      "seed": 1205
+    },
+    "fit_and_score_seconds": 93.28832649998367,
+    "train_rows": 1260
+  },
+  "counts": {
+    "unlabeled_reference": 1200,
+    "known_normal_support": 50,
+    "known_anomaly_support": 10,
+    "validation": 813,
+    "test": 813
+  },
+  "test_labels_used_in_model_or_fusion_selection": false,
+  "prediction_sha256": "c1fbeec1ec417bbb668632275836963a93ac4ff82e94d12088fe89b683bd9636",
+  "runner_sha256": "9925c5e25ed334f35172a8caa52f53afd1a8a9c430ff7c203f75f8035d8e139c"
+}

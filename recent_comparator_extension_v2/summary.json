@@ -1,0 +1,281 @@
+{
+  "status": "complete_posthoc_matched_comparator_extension",
+  "protocol_sha256": "7658af0889a3a43687f241636ea62b6e84eac2d7fbf570ae9c6832c91fcedf13",
+  "n_families": 19,
+  "seeds_per_family": 5,
+  "family_inference_unit": true,
+  "excluded_pilot": {
+    "dataset": "LandParcelValidation",
+    "seed": 1201,
+    "reason": "Feasibility pilot; FairComb implementation audited and corrected before the main batch. Exclude the entire dataset family from inference."
+  },
+  "methods": {
+    "candidate_test_AP": {
+      "macro_AP": 0.6342814787456754,
+      "family_sd": 0.3099243615442027,
+      "family_bootstrap_95CI": [
+        0.4968959473250625,
+        0.7660513796064798
+      ],
+      "per_family_AP": [
+        0.36067806557204846,
+        0.6366605972779952,
+        0.15617312432258176,
+        0.767531497963476,
+        0.8625960793347989,
+        1.0,
+        0.5169697265708698,
+        1.0,
+        0.1671754947611126,
+        0.6319248402234845,
+        0.8086148920826733,
+        0.0359545435499762,
+        0.9494100355764384,
+        0.9992276795582204,
+        0.540101822220467,
+        0.4344472194013644,
+        0.7560865981259031,
+        0.43196842103795774,
+        0.9958274585884659
+      ]
+    },
+    "FairComb_test_AP": {
+      "macro_AP": 0.5786510430346371,
+      "family_sd": 0.31404084147558964,
+      "family_bootstrap_95CI": [
+        0.44175023598955343,
+        0.714029696623405
+      ],
+      "per_family_AP": [
+        0.3300654740226281,
+        0.6003159241103353,
+        0.1484221386200404,
+        0.7291376723603502,
+        0.8420697477411008,
+        1.0,
+        0.4925926613482563,
+        1.0,
+        0.11565447719280146,
+        0.6028044327604375,
+        0.7859183612493854,
+        0.03234577136274126,
+        0.6962594192557727,
+        0.9902632756233587,
+        0.2931403215268929,
+        0.42172013595356833,
+        0.692491682446487,
+        0.28457841755014635,
+        0.9365899045338019
+      ]
+    },
+    "WSAD_DT_test_AP": {
+      "macro_AP": 0.5550488288471582,
+      "family_sd": 0.32714718803269477,
+      "family_bootstrap_95CI": [
+        0.41275109464071447,
+        0.6969375064386143
+      ],
+      "per_family_AP": [
+        0.3186259878577131,
+        0.6186723971322099,
+        0.15972129381014838,
+        0.6949285644936948,
+        0.8292776840722123,
+        1.0,
+        0.4327484593885359,
+        1.0,
+        0.11381396330317442,
+        0.5470471884588127,
+        0.7903577356795548,
+        0.02148459719159872,
+        0.34748234078823326,
+        1.0,
+        0.442623150420709,
+        0.3725172694210152,
+        0.7153903987583021,
+        0.148416395307956,
+        0.9928203220121337
+      ]
+    }
+  },
+  "family_level_contrasts": [
+    {
+      "comparison": "AP-weighted rank fusion vs FairComb_test_AP",
+      "mean_delta_AP": 0.05563043571103837,
+      "median_delta_AP": 0.029120407463047004,
+      "paired_family_bootstrap_95CI": [
+        0.026208943324107514,
+        0.09174942626888709
+      ],
+      "wins_ties_losses": [
+        17,
+        2,
+        0
+      ],
+      "wilcoxon_p_raw": 0.0002930525201924893,
+      "wilcoxon_p_holm_2": 0.0005861050403849786
+    },
+    {
+      "comparison": "AP-weighted rank fusion vs WSAD_DT_test_AP",
+      "mean_delta_AP": 0.07923264989851733,
+      "median_delta_AP": 0.04069619936760094,
+      "paired_family_bootstrap_95CI": [
+        0.02980092528702091,
+        0.15049823591708558
+      ],
+      "wins_ties_losses": [
+        15,
+        2,
+        2
+      ],
+      "wilcoxon_p_raw": 0.0005991194011680517,
+      "wilcoxon_p_holm_2": 0.0005991194011680517
+    }
+  ],
+  "friedman": {
+    "chi2": 19.882352941176464,
+    "p": 4.815062350473826e-05
+  },
+  "WSAD_DT_runtime_seconds": {
+    "median_family_mean": 130.0818555799953,
+    "mean_family_mean": 268.89730035368393,
+    "family_values": [
+      100.15092165999813,
+      46.25120043999632,
+      114.00032093999907,
+      69.41940353999962,
+      40.415189060010015,
+      113.93270788000082,
+      55.709760019998065,
+      31.597620820003794,
+      343.56223501999045,
+      305.38286851999,
+      180.5637881200004,
+      434.9066691599961,
+      351.78671097999904,
+      104.63498676000745,
+      257.4358904000022,
+      130.0818555799953,
+      143.0318822000001,
+      1365.756851900008,
+      920.4278437200003
+    ]
+  },
+  "per_family": {
+    "GeneAnnotationOverlap": {
+      "candidate_test_AP": 0.36067806557204846,
+      "FairComb_test_AP": 0.3300654740226281,
+      "WSAD_DT_test_AP": 0.3186259878577131,
+      "WSAD_DT_seconds_mean": 100.15092165999813
+    },
+    "DeliveryService": {
+      "candidate_test_AP": 0.6366605972779952,
+      "FairComb_test_AP": 0.6003159241103353,
+      "WSAD_DT_test_AP": 0.6186723971322099,
+      "WSAD_DT_seconds_mean": 46.25120043999632
+    },
+    "PatientStatusTracking": {
+      "candidate_test_AP": 0.15617312432258176,
+      "FairComb_test_AP": 0.1484221386200404,
+      "WSAD_DT_test_AP": 0.15972129381014838,
+      "WSAD_DT_seconds_mean": 114.00032093999907
+    },
+    "HealthOutcome": {
+      "candidate_test_AP": 0.767531497963476,
+      "FairComb_test_AP": 0.7291376723603502,
+      "WSAD_DT_test_AP": 0.6949285644936948,
+      "WSAD_DT_seconds_mean": 69.41940353999962
+    },
+    "KidneyTransplants": {
+      "candidate_test_AP": 0.8625960793347989,
+      "FairComb_test_AP": 0.8420697477411008,
+      "WSAD_DT_test_AP": 0.8292776840722123,
+      "WSAD_DT_seconds_mean": 40.415189060010015
+    },
+    "SoilComposition": {
+      "candidate_test_AP": 1.0,
+      "FairComb_test_AP": 1.0,
+      "WSAD_DT_test_AP": 1.0,
+      "WSAD_DT_seconds_mean": 113.93270788000082
+    },
+    "CodeQualityMetrics": {
+      "candidate_test_AP": 0.5169697265708698,
+      "FairComb_test_AP": 0.4925926613482563,
+      "WSAD_DT_test_AP": 0.4327484593885359,
+      "WSAD_DT_seconds_mean": 55.709760019998065
+    },
+    "ElectrocaloricAnomalies": {
+      "candidate_test_AP": 1.0,
+      "FairComb_test_AP": 1.0,
+      "WSAD_DT_test_AP": 1.0,
+      "WSAD_DT_seconds_mean": 31.597620820003794
+    },
+    "FinancialPortfolioAnomalies": {
+      "candidate_test_AP": 0.1671754947611126,
+      "FairComb_test_AP": 0.11565447719280146,
+      "WSAD_DT_test_AP": 0.11381396330317442,
+      "WSAD_DT_seconds_mean": 343.56223501999045
+    },
+    "FraudulentSales": {
+      "candidate_test_AP": 0.6319248402234845,
+      "FairComb_test_AP": 0.6028044327604375,
+      "WSAD_DT_test_AP": 0.5470471884588127,
+      "WSAD_DT_seconds_mean": 305.38286851999
+    },
+    "FootballBetting": {
+      "candidate_test_AP": 0.8086148920826733,
+      "FairComb_test_AP": 0.7859183612493854,
+      "WSAD_DT_test_AP": 0.7903577356795548,
+      "WSAD_DT_seconds_mean": 180.5637881200004
+    },
+    "MobileMoneyTransactions": {
+      "candidate_test_AP": 0.0359545435499762,
+      "FairComb_test_AP": 0.03234577136274126,
+      "WSAD_DT_test_AP": 0.02148459719159872,
+      "WSAD_DT_seconds_mean": 434.9066691599961
+    },
+    "RestaurantViolation": {
+      "candidate_test_AP": 0.9494100355764384,
+      "FairComb_test_AP": 0.6962594192557727,
+      "WSAD_DT_test_AP": 0.34748234078823326,
+      "WSAD_DT_seconds_mean": 351.78671097999904
+    },
+    "HatPricingRatings": {
+      "candidate_test_AP": 0.9992276795582204,
+      "FairComb_test_AP": 0.9902632756233587,
+      "WSAD_DT_test_AP": 1.0,
+      "WSAD_DT_seconds_mean": 104.63498676000745
+    },
+    "FinancialCredit": {
+      "candidate_test_AP": 0.540101822220467,
+      "FairComb_test_AP": 0.2931403215268929,
+      "WSAD_DT_test_AP": 0.442623150420709,
+      "WSAD_DT_seconds_mean": 257.4358904000022
+    },
+    "LandShapeAnomaly": {
+      "candidate_test_AP": 0.4344472194013644,
+      "FairComb_test_AP": 0.42172013595356833,
+      "WSAD_DT_test_AP": 0.3725172694210152,
+      "WSAD_DT_seconds_mean": 130.0818555799953
+    },
+    "GasBenchmark": {
+      "candidate_test_AP": 0.7560865981259031,
+      "FairComb_test_AP": 0.692491682446487,
+      "WSAD_DT_test_AP": 0.7153903987583021,
+      "WSAD_DT_seconds_mean": 143.0318822000001
+    },
+    "FacilityViolation": {
+      "candidate_test_AP": 0.43196842103795774,
+      "FairComb_test_AP": 0.28457841755014635,
+      "WSAD_DT_test_AP": 0.148416395307956,
+      "WSAD_DT_seconds_mean": 1365.756851900008
+    },
+    "MedicalClassificationAnomalies": {
+      "candidate_test_AP": 0.9958274585884659,
+      "FairComb_test_AP": 0.9365899045338019,
+      "WSAD_DT_test_AP": 0.9928203220121337,
+      "WSAD_DT_seconds_mean": 920.4278437200003
+    }
+  },
+  "interpretation_note": "All comparator-extension outputs are retrospective because the Replication 5 candidate outcomes had already been examined. Do not describe this as a new prospective confirmation."
+}

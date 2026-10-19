@@ -1,0 +1,20 @@
+{
+  "fit_seconds": {
+    "PReNet": 21.111715400009416,
+    "DevNet": 6.788896600002772
+  },
+  "val_test_inference_seconds": {
+    "PReNet": 2.75109330000123,
+    "DevNet": 0.04939939999894705
+  },
+  "n_fit_unlabeled": 3306,
+  "n_known_anomaly_support": 10,
+  "n_validation": 2071,
+  "n_test": 2072,
+  "epochs": 30,
+  "batch_size": 64,
+  "device": "cpu",
+  "prediction_sha256": "75c5a908dd5bf409833c2c4b12dff3824e7bdbb61492a9c98068cb8c389deed0",
+  "protocol_sha256": "c002b0b64f83a52fff24491db8b4d1cb64b316faa64bc88b5c08fbed58301484",
+  "runner_sha256": "ce16197a18e26576b87f533660857f8f85107bb77d6d06492c4cf9680cdbb2d1"
+}

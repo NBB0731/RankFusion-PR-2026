@@ -1,0 +1,55 @@
+{
+  "status": "complete",
+  "dataset": "ElectrocaloricAnomalies",
+  "seed": 1205,
+  "protocol_sha256": "7658af0889a3a43687f241636ea62b6e84eac2d7fbf570ae9c6832c91fcedf13",
+  "official_source_commits": {
+    "WSAD-DT": "b59c4aa4595fd24462e9c6852c1fc792a0dc7d0d",
+    "FairComb": "1309b7780e61c96998246135348bbfdfb2939b01"
+  },
+  "metrics": {
+    "candidate_validation_AP": 1.0,
+    "candidate_test_AP": 0.9999999999999999,
+    "FairComb_test_AP": 1.0,
+    "WSAD_DT_validation_AP": 1.0,
+    "WSAD_DT_test_AP": 0.9999999999999999
+  },
+  "faircomb": {
+    "selected_experts": [
+      "HistGradientBoosting"
+    ],
+    "selected_indices": [
+      3
+    ],
+    "validation_top_k": 122,
+    "score_parity": 0.0,
+    "ep_before": 0.0,
+    "ep_after": 0.0,
+    "correction_applied": false,
+    "fallback_fixed_topk": null,
+    "variant": "Z-Norm mean",
+    "ep_combination_rule": "max over selected expert scores",
+    "final_combination": "mean",
+    "gselect_z_norm_validation_AP": 1.0
+  },
+  "wsad_dt": {
+    "official_defaults": {
+      "n_ensemble": 5,
+      "batch_size": 64,
+      "epochs": 100,
+      "seed": 1205
+    },
+    "fit_and_score_seconds": 30.611756099999184,
+    "train_rows": 369
+  },
+  "counts": {
+    "unlabeled_reference": 309,
+    "known_normal_support": 50,
+    "known_anomaly_support": 10,
+    "validation": 315,
+    "test": 315
+  },
+  "test_labels_used_in_model_or_fusion_selection": false,
+  "prediction_sha256": "23fe390b216b3d77b6c9703ebc0e6ec504d6fd41985a7fac460ae6917b97bc86",
+  "runner_sha256": "9925c5e25ed334f35172a8caa52f53afd1a8a9c430ff7c203f75f8035d8e139c"
+}

@@ -1,0 +1,63 @@
+{
+  "status": "complete",
+  "dataset": "DeliveryService",
+  "seed": 1203,
+  "protocol_sha256": "7658af0889a3a43687f241636ea62b6e84eac2d7fbf570ae9c6832c91fcedf13",
+  "official_source_commits": {
+    "WSAD-DT": "b59c4aa4595fd24462e9c6852c1fc792a0dc7d0d",
+    "FairComb": "1309b7780e61c96998246135348bbfdfb2939b01"
+  },
+  "metrics": {
+    "candidate_validation_AP": 0.6050984929596217,
+    "candidate_test_AP": 0.5908581814019185,
+    "FairComb_test_AP": 0.5238180065653933,
+    "WSAD_DT_validation_AP": 0.548354535473311,
+    "WSAD_DT_test_AP": 0.6084504962100383
+  },
+  "faircomb": {
+    "selected_experts": [
+      "Random Forest",
+      "RRFEN fuzzy-only",
+      "HistGradientBoosting",
+      "RBF-SVM",
+      "RRFEN-Hybrid"
+    ],
+    "selected_indices": [
+      1,
+      4,
+      3,
+      0,
+      5
+    ],
+    "validation_top_k": 163,
+    "score_parity": 0.09417375737929257,
+    "ep_before": 0.22030166911622429,
+    "ep_after": 0.20040275043952271,
+    "correction_applied": true,
+    "fallback_fixed_topk": null,
+    "variant": "WtSR",
+    "ep_combination_rule": "max over selected expert scores",
+    "final_combination": "mean",
+    "gselect_z_norm_validation_AP": 0.5452265668468581
+  },
+  "wsad_dt": {
+    "official_defaults": {
+      "n_ensemble": 5,
+      "batch_size": 64,
+      "epochs": 100,
+      "seed": 1203
+    },
+    "fit_and_score_seconds": 45.792209599982016,
+    "train_rows": 544
+  },
+  "counts": {
+    "unlabeled_reference": 484,
+    "known_normal_support": 50,
+    "known_anomaly_support": 10,
+    "validation": 466,
+    "test": 467
+  },
+  "test_labels_used_in_model_or_fusion_selection": false,
+  "prediction_sha256": "0a72520e9b50c3a682e5386a277c84dc78c1856f635253048c3bc38da1fe6efd",
+  "runner_sha256": "9925c5e25ed334f35172a8caa52f53afd1a8a9c430ff7c203f75f8035d8e139c"
+}

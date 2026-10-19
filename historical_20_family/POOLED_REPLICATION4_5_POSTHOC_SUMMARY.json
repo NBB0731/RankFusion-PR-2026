@@ -1,0 +1,132 @@
+{
+  "status": "posthoc_pooled_summary_two_fresh_family_disjoint_cohorts",
+  "n_families": 40,
+  "cohorts": {
+    "Replication 4": 20,
+    "Replication 5": 20
+  },
+  "primary_method": "rank_meanAP_6",
+  "inference_unit": "dataset family; seeds already averaged within family",
+  "cohorts_family_disjoint": true,
+  "comparisons": {
+    "Extra Trees": {
+      "mean_delta_AP": 0.0211394393973644,
+      "median_delta_AP": 0.02249025042655939,
+      "stratified_family_bootstrap_95CI": [
+        0.013296154127941858,
+        0.02882760666707942
+      ],
+      "wins_ties_losses": [
+        28,
+        4,
+        8
+      ],
+      "wilcoxon_p_raw": 8.495383476045264e-05,
+      "cohort_mean_delta_AP": {
+        "Replication 4": 0.0138364962241193,
+        "Replication 5": 0.028442382570609503
+      },
+      "holm_p_6": 0.0004247691738022632
+    },
+    "Six-expert validation selector": {
+      "mean_delta_AP": 0.010687605274435559,
+      "median_delta_AP": 0.005520068723360701,
+      "stratified_family_bootstrap_95CI": [
+        0.005908064916921303,
+        0.016200721111482408
+      ],
+      "wins_ties_losses": [
+        26,
+        4,
+        10
+      ],
+      "wilcoxon_p_raw": 0.00014811973504404356,
+      "cohort_mean_delta_AP": {
+        "Replication 4": 0.0076806971669075045,
+        "Replication 5": 0.013694513381963614
+      },
+      "holm_p_6": 0.0005924789401761742
+    },
+    "Expanded eight-expert validation selector": {
+      "mean_delta_AP": 0.009111218204028142,
+      "median_delta_AP": 0.005520068723360701,
+      "stratified_family_bootstrap_95CI": [
+        0.0030873170359934764,
+        0.015428553379082126
+      ],
+      "wins_ties_losses": [
+        25,
+        4,
+        11
+      ],
+      "wilcoxon_p_raw": 0.0018374669900583288,
+      "cohort_mean_delta_AP": {
+        "Replication 4": 0.004444742150117445,
+        "Replication 5": 0.013777694257938839
+      },
+      "holm_p_6": 0.005512400970174986
+    },
+    "Bootstrap-penalized rank fusion": {
+      "mean_delta_AP": 0.0008538781787186887,
+      "median_delta_AP": -1.1102230246251565e-16,
+      "stratified_family_bootstrap_95CI": [
+        -0.00023838402527528486,
+        0.0023424647258930838
+      ],
+      "wins_ties_losses": [
+        17,
+        4,
+        19
+      ],
+      "wilcoxon_p_raw": 0.7686183974897491,
+      "cohort_mean_delta_AP": {
+        "Replication 4": 0.0004608971096751381,
+        "Replication 5": 0.0012468592477622394
+      },
+      "holm_p_6": 0.7686183974897491
+    },
+    "Uniform rank fusion": {
+      "mean_delta_AP": 0.03596720830816432,
+      "median_delta_AP": 0.00987101089529302,
+      "stratified_family_bootstrap_95CI": [
+        0.017702287982223383,
+        0.059648800910813336
+      ],
+      "wins_ties_losses": [
+        34,
+        2,
+        4
+      ],
+      "wilcoxon_p_raw": 2.039249521440414e-06,
+      "cohort_mean_delta_AP": {
+        "Replication 4": 0.040813466515002055,
+        "Replication 5": 0.031120950101326594
+      },
+      "holm_p_6": 1.2235497128642485e-05
+    },
+    "Four-classical-expert rank fusion": {
+      "mean_delta_AP": 0.008341091706173333,
+      "median_delta_AP": 0.0014563273161434243,
+      "stratified_family_bootstrap_95CI": [
+        0.0034166114736299534,
+        0.01428078917231157
+      ],
+      "wins_ties_losses": [
+        24,
+        4,
+        12
+      ],
+      "wilcoxon_p_raw": 0.004251782460917726,
+      "cohort_mean_delta_AP": {
+        "Replication 4": 0.00824411290227452,
+        "Replication 5": 0.008438070510072148
+      },
+      "holm_p_6": 0.008503564921835452
+    }
+  },
+  "interpretation": "Post-hoc pooled analysis of Replication 4 and Replication 5. Replication 5 remains the prospective independent confirmation; this pooled analysis is supportive, not a separately pre-registered test.",
+  "source_hashes": {
+    "RANKFUSION_REPLICATION4_CONFIRMATORY_ABLATIONS.json": "742fcbb263a044bf3cdb639185c4782f789aa5c87efc75eb37d59a6ddc32419f",
+    "RANKFUSION_REPLICATION5_CONFIRMATORY_ABLATIONS.json": "da6d3895f33df0b916a44fd19958b0622d37f3b65d856ce20e3ec925be64515a"
+  }
+}

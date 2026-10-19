@@ -1,0 +1,9 @@
+{
+  "status": "fail",
+  "dataset": "LandParcelValidation",
+  "seed": 1201,
+  "max_abs_error": 0.05110558867454529,
+  "tolerance": 1e-06,
+  "parallel": true,
+  "pilot_excluded_from_all_inference": true
+}

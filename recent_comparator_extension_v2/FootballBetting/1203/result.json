@@ -1,0 +1,60 @@
+{
+  "status": "complete",
+  "dataset": "FootballBetting",
+  "seed": 1203,
+  "protocol_sha256": "7658af0889a3a43687f241636ea62b6e84eac2d7fbf570ae9c6832c91fcedf13",
+  "official_source_commits": {
+    "WSAD-DT": "b59c4aa4595fd24462e9c6852c1fc792a0dc7d0d",
+    "FairComb": "1309b7780e61c96998246135348bbfdfb2939b01"
+  },
+  "metrics": {
+    "candidate_validation_AP": 0.7930502312719132,
+    "candidate_test_AP": 0.7886193004000409,
+    "FairComb_test_AP": 0.786277292414996,
+    "WSAD_DT_validation_AP": 0.818882372813039,
+    "WSAD_DT_test_AP": 0.8098253683360159
+  },
+  "faircomb": {
+    "selected_experts": [
+      "RBF-SVM",
+      "RRFEN fuzzy-only",
+      "Random Forest"
+    ],
+    "selected_indices": [
+      0,
+      4,
+      1
+    ],
+    "validation_top_k": 1053,
+    "score_parity": 0.0472503004940803,
+    "ep_before": 0.2342574542477197,
+    "ep_after": 0.16364704811172937,
+    "correction_applied": true,
+    "fallback_fixed_topk": null,
+    "variant": "WtSR",
+    "ep_combination_rule": "max over selected expert scores",
+    "final_combination": "mean",
+    "gselect_z_norm_validation_AP": 0.7806764749171184
+  },
+  "wsad_dt": {
+    "official_defaults": {
+      "n_ensemble": 5,
+      "batch_size": 64,
+      "epochs": 100,
+      "seed": 1203,
+      "parallel": false
+    },
+    "fit_and_score_seconds": 201.16287490000832,
+    "train_rows": 2206
+  },
+  "counts": {
+    "unlabeled_reference": 2146,
+    "known_normal_support": 50,
+    "known_anomaly_support": 10,
+    "validation": 2376,
+    "test": 2376
+  },
+  "test_labels_used_in_model_or_fusion_selection": false,
+  "prediction_sha256": "1bce9c7c8440988485b99bb23626fd3c848cf956ef118d5fb9395ca299b90e83",
+  "runner_sha256": "342f26440c4481a2dfe0d4ecfb69928e4c96d38051e3ab31d63f2aeb60c7977f"
+}

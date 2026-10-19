@@ -1,0 +1,58 @@
+{
+  "status": "complete",
+  "dataset": "MedicalClassificationAnomalies",
+  "seed": 1203,
+  "protocol_sha256": "7658af0889a3a43687f241636ea62b6e84eac2d7fbf570ae9c6832c91fcedf13",
+  "official_source_commits": {
+    "WSAD-DT": "b59c4aa4595fd24462e9c6852c1fc792a0dc7d0d",
+    "FairComb": "1309b7780e61c96998246135348bbfdfb2939b01"
+  },
+  "metrics": {
+    "candidate_validation_AP": 0.9969652401864311,
+    "candidate_test_AP": 0.995403678716688,
+    "FairComb_test_AP": 0.9961773671655197,
+    "WSAD_DT_validation_AP": 0.99163309924808,
+    "WSAD_DT_test_AP": 0.9932717539566539
+  },
+  "faircomb": {
+    "selected_experts": [
+      "Extra Trees",
+      "HistGradientBoosting"
+    ],
+    "selected_indices": [
+      2,
+      3
+    ],
+    "validation_top_k": 1026,
+    "score_parity": 0.1178328772115107,
+    "ep_before": 0.002697620220546426,
+    "ep_after": 0.002697620220546426,
+    "correction_applied": false,
+    "fallback_fixed_topk": null,
+    "variant": "Z-Norm mean",
+    "ep_combination_rule": "max over selected expert scores",
+    "final_combination": "mean",
+    "gselect_z_norm_validation_AP": 0.9972412064161454
+  },
+  "wsad_dt": {
+    "official_defaults": {
+      "n_ensemble": 5,
+      "batch_size": 64,
+      "epochs": 100,
+      "seed": 1203,
+      "parallel": false
+    },
+    "fit_and_score_seconds": 925.0342182999884,
+    "train_rows": 11676
+  },
+  "counts": {
+    "unlabeled_reference": 11616,
+    "known_normal_support": 50,
+    "known_anomaly_support": 10,
+    "validation": 8286,
+    "test": 8287
+  },
+  "test_labels_used_in_model_or_fusion_selection": false,
+  "prediction_sha256": "bc6249ab7953b9d6ef3f896ea2b96c5a367ebb5cc191d75e72883cb39baacc28",
+  "runner_sha256": "342f26440c4481a2dfe0d4ecfb69928e4c96d38051e3ab31d63f2aeb60c7977f"
+}

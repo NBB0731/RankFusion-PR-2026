@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "protocol_sha256": "c002b0b64f83a52fff24491db8b4d1cb64b316faa64bc88b5c08fbed58301484",
+  "metadata_manifest_sha256": "e92e6c1b1f11b32297dc772b5cfa3e10d9c97712c05b815f520f251c65e6c3ed",
+  "runner_sha256": "37279ff5fc1a81a8027a28122120879b1857b57f42b4c997fde49020e88d644f",
+  "expected_runs": 100,
+  "checked_runs": 100,
+  "all_hashes_match": true,
+  "errors": []
+}
